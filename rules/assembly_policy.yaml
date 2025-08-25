@@ -1,0 +1,5 @@
+alignment:
+  voice_event_ms_ok: 120
+  sfx_event_ms_ok: 120
+  lipsync_conf_min: 0.65
+  repair_order: [retime, lcut, hold, broll, rewrite]

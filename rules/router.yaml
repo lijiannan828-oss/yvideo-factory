@@ -1,0 +1,6 @@
+providers:
+  llm_primary: gemini
+  video_primary: flux_local
+  fallback:
+    - gemini_flash
+    - gemini_15_pro

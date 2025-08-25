@@ -1,0 +1,20 @@
+[
+  {
+    "character": "李老四",
+     "character_id":0,
+    "description": "约四十岁左右的普通村民，是整个“挡”事件的核心亲历者。他常年劳作，肤色黝黑，性格中有赌徒的随性和侥幸，也有普通人面对未知时的极度恐惧。他的形象应该体现出刚刚从极度黑暗和恐惧中逃脱出来的惊魂未定与劫后余生。",
+    "prompt": "Full body portrait of a 40-year-old Chinese farmer from a rural village in the 1990s, named Li Laosi. He has a weather-beaten, tanned face with a slightly unshaven look and wide, terrified eyes, capturing a look of pure shock and lingering fear. Short, unkempt black hair. He is wearing a faded, dark blue worn-out work jacket over a simple white undershirt, and dark, dusty trousers with simple cloth shoes. He stands tensely on a dark dirt road at night, his posture slightly hunched and defensive. He is holding a single, almost burnt-out matchstick in his trembling hand, a hand-rolled cigarette dangling from his lips. The background is pitch black, suggesting he just escaped a terrifying darkness. Realistic style, cinematic lighting, dramatic shadows, hyper-detailed."
+  },
+  {
+    "character": "村长",
+     "character_id":1,
+    "description": "大约五十多岁，是李家坳的主心骨。他见识过一些风浪，性格沉稳、果决，在村民中极有威信。面对“挡”这种怪事，他虽然心中也有忌惮，但更多的是一种要为村民铲除祸害的责任感和决心。他的形象必须体现出那个年代基层干部的威严和朴素。",
+    "prompt": "Full body portrait of a 55-year-old Chinese village chief from the 1990s. He has a stern, authoritative face with deep wrinkles, a square jaw, and sharp, determined eyes under a furrowed brow. Short, neatly-combed graying black hair. He is wearing a clean, but slightly worn, dark gray Zhongshan suit jacket (cadre jacket) and matching trousers with sturdy leather shoes. He stands resolutely in broad daylight on freshly dug earth, firmly holding a shovel with both hands, muscles tensed. His expression is one of unyielding resolve and leadership, facing a challenge head-on. The background is a rural village setting with tobacco leaves drying under the sun. Photorealistic, detailed, natural sunlight."
+  },
+  {
+    "character": "讲述“挡”传说的老人",
+     "character_id":2,
+    "description": "村里七十多岁的长者，是村庄历史和传说的活化石。他一生都浸润在烟草香和乡土故事中，眼神浑浊又似乎能看透一切。他代表了村民对于未知世界的敬畏和古老的生存智慧。他既是故事的旁观者，也是神秘气氛的营造者。",
+    "prompt": "Full body portrait of a 75-year-old wise old man from a rural Chinese village in the 1990s. His face is a roadmap of deep wrinkles and sunspots, with deep-set, knowing yet hazy eyes that hold ancient secrets. He has thin, wispy white hair and a sparse goatee. He wears traditional, patched, loose-fitting dark blue tunic and baggy trousers, with handmade cloth shoes. He is slightly hunched with age and stands at the edge of a field of golden, drying tobacco leaves. He holds a long-stemmed, old-fashioned Chinese tobacco pipe (Yandaiguozi) to his lips, a thin wisp of smoke curling upwards. His expression is mysterious, thoughtful, and melancholic, as if recalling a distant memory. Photorealistic style, warm afternoon light, highly detailed."
+  }
+]
