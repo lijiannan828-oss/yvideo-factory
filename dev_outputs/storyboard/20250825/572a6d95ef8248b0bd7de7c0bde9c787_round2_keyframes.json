@@ -1,0 +1,1634 @@
+[
+  {
+    "frame_idx": 1,
+    "frame": "九十年代李家坳村口的广角远景，镜头开始缓慢横摇，展现出夜色中模糊的村庄轮廓和压抑的云层。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": null,
+    "isMainScene": 0,
+    "sceneId": null,
+    "text": "九十年代的秋夜，在弥漫着浓烈烟草甜香的李家坳，",
+    "sfx": [
+      {
+        "description": "远处传来的几声零落的狗吠",
+        "location": "背景, 偏右",
+        "timing": "持续",
+        "volume": "弱"
+      },
+      {
+        "description": "秋风吹过田野的低沉呼啸声",
+        "location": "全景/环境音",
+        "timing": "持续",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: A deep autumn night, overcast with thick, low-hanging clouds, no moonlight or starlight. Era and Region: Rural China, circa 1990s. Scene: The silhouette of a small village, Li Family Hollow (李家坳), is barely visible against the dark sky. Tiled farmhouses are suggested shapes in the gloom. A thin, tangible mist mixed with the scent of tobacco hangs in the air. Subject & Action: The landscape is still and sleeping. Lighting: Extremely low ambient light, creating a deep blue and black color palette. The scene is dominated by oppressive shadows. Camera/DoF: Extreme wide-angle establishing shot, 18mm lens, fixed on a tripod, deep depth of field. The horizon line is low, with the sky taking up two-thirds of the frame to emphasize a sense of pressure. Mood/Atmosphere: Mysterious, oppressive, and somber.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "广角远景固定机位，镜头从左至右缓慢横摇，扫过九十年代中国北方农村在秋夜中的轮廓，天空乌云密布，气氛压抑。",
+    "seed": 19930711,
+    "shot_id": "S001"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "横摇镜头结束，定格在村庄最黑暗的一角，薄雾显得更加浓重。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": null,
+    "isMainScene": 0,
+    "sceneId": null,
+    "text": "黑暗浓稠得如同化不开的墨。",
+    "sfx": [
+      {
+        "description": "风声渐强后减弱",
+        "location": "全景/环境音",
+        "timing": "持续",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: A deep autumn night, overcast with thick, low-hanging clouds, no moonlight or starlight. Era and Region: Rural China, circa 1990s. Scene: The edge of Li Family Hollow (李家坳), where the village structures dissolve into pure darkness. The tobacco-scented mist is denser here, catching what little ambient light exists. Subject & Action: The village is completely still, shrouded in an impenetrable darkness. Lighting: Near-total darkness, with only the faintest outlines visible. The color palette is almost monochrome, dominated by black. Camera/DoF: Extreme wide-angle shot, 18mm lens, the slow pan comes to a stop. Deep depth of field, everything is sharply defined yet obscured by shadow. Mood/Atmosphere: Deeply mysterious, foreboding, and isolating.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "广角远景固定机位，镜头横摇结束，画面定格，展现村庄沉浸在浓稠的黑暗中，薄雾弥漫。",
+    "seed": 19930711,
+    "shot_id": "S001"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "第一人称视角，站在村南小路的入口，前方是一条延伸入纯粹黑暗的泥土路，两旁树影幢幢。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": null,
+    "isMainScene": 1,
+    "sceneId": "scene01",
+    "text": "尤其是村子南头那条无名小路，仿佛被一只无形巨手生生掐断了所有光亮，",
+    "sfx": [
+      {
+        "description": "风吹过干枯树叶的沙沙声",
+        "location": "画面左侧, 画面右侧",
+        "timing": "持续",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: Dead of night, overcast and moonless. Era and Region: Rural China, 1990s. Scene: As described in scene01, this is the entrance to the 'Ghost Wall' path. A narrow, soft dirt path leads forward, flanked by dense, gnarled trees whose branches interlace overhead like skeletal claws. The path disappears into absolute blackness. Subject & Action: The camera begins a slow, hesitant push forward. The slight, natural shake of a handheld camera is visible. Lighting: No discernible light source. The oppressive darkness swallows everything, with only the immediate foreground path visible in deep indigo and muddy brown. Camera/DoF: First-person POV shot, 35mm lens, eye-level. Shallow depth of field, focusing on the path just ahead, while the deeper darkness remains an impenetrable void. Mood/Atmosphere: Unsettling, claustrophobic, and foreboding.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "第一人称手持视角，镜头开始沿着一条漆黑的乡间小路缓慢向前推进，路两旁的树枝形如鬼爪，画面有轻微晃动。",
+    "seed": 19930711,
+    "shot_id": "S002"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "镜头继续前推，几乎完全被黑暗吞噬，只能勉强看到脚下的一点点路面。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": null,
+    "isMainScene": 1,
+    "sceneId": "scene01",
+    "text": "成了村民口中讳莫如深的鬼打墙地界——挡。\"",
+    "sfx": [
+      {
+        "description": "风声减弱，环境变得异常安静",
+        "location": "全景/环境音",
+        "timing": "出点",
+        "volume": "弱"
+      }
+    ],
+    "prompt": "Environment: Dead of night, overcast and moonless. Era and Region: Rural China, 1990s. Scene: Deeper within the 'Ghost Wall' path (scene01). The gnarled trees are now just indistinct, menacing shapes. The dirt path seems to end, completely consumed by an impenetrable wall of darkness just ahead. Subject & Action: The camera's forward motion slows to a near stop as it confronts the absolute blackness. The handheld shake increases slightly, suggesting hesitation. Lighting: Pitch black. Any detail is lost to the suffocating gloom. The screen is almost entirely black, save for a sliver of muddy ground at the very bottom of the frame. Camera/DoF: First-person POV shot, 35mm lens, eye-level. The lens seems to be pushing into nothingness. Mood/Atmosphere: Pure dread, disorientation, and the feeling of being swallowed by the void.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "第一人称手持视角，镜头继续向前，最终完全陷入纯粹的黑暗中，画面几乎全黑，只留一丝不安的晃动。",
+    "seed": 19930711,
+    "shot_id": "S002"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "中景跟拍，李老四的背影出现在村路上，他穿着旧夹克，步态轻松摇晃，哼着小调。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": 0,
+    "isMainScene": 0,
+    "sceneId": null,
+    "text": "李老四那晚就栽在了这里。牌局散得晚，",
+    "sfx": [
+      {
+        "description": "断断续续的、跑调的哼唱声",
+        "location": "中心, 前景",
+        "timing": "持续",
+        "volume": "中"
+      },
+      {
+        "description": "脚步踩在干燥土路上的沙沙声",
+        "location": "中心, 前景",
+        "timing": "持续",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: Late autumn night, moonless. Era and Region: Rural China, 1990s. Scene: A generic dirt path in the village. Main Character: Li Laosi, identity reference from charactId 0, wearing a faded, dark blue worn-out work jacket. Subject & Action + Pose + Emotion: From a medium tracking shot behind him, Li Laosi walks with a slightly swaggering, relaxed gait. His shoulders are loose, and he is humming a tune. Emotion: Content and carefree (intensity 1): conveyed through his relaxed posture and jaunty walk. Gaze: He looks forward down the dark path. Lighting: Extremely dim ambient light provides a faint rim light on his silhouette, separating him from the pitch-black background. Most of his form is in shadow. Camera/DoF: Medium shot, 50mm lens, tracking from behind. The camera maintains a steady distance. Following the rule of thirds, he is on the left side of the frame, with a large expanse of darkness to his right. Mood/Atmosphere: Deceptively calm, with an underlying loneliness.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "中景镜头，从背后跟拍李老四，他穿着旧夹克，揣着钱，哼着小调在漆黑的村路上悠闲地走着，步态有些摇晃。",
+    "seed": 19930711,
+    "shot_id": "S003"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "镜头稍稍拉近，可以看到他一只手揣在兜里，另一只手随着步伐摆动，完全放松的状态。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": 0,
+    "isMainScene": 0,
+    "sceneId": null,
+    "text": "他揣着赢来的几块零钱，哼着小调往家走，",
+    "sfx": [
+      {
+        "description": "哼唱声持续",
+        "location": "中心, 前景",
+        "timing": "持续",
+        "volume": "中"
+      },
+      {
+        "description": "脚步声持续",
+        "location": "中心, 前景",
+        "timing": "持续",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: Late autumn night, moonless. Era and Region: Rural China, 1990s. Scene: A dark village dirt path. Main Character: Li Laosi, identity reference from charactId 0, wearing his worn jacket. Subject & Action + Pose + Emotion: The camera pushes in slightly closer to his back. One hand is stuffed into his trouser pocket, feeling the money within. The other arm swings loosely with his rhythm. His posture remains relaxed and overconfident. Emotion: Smug satisfaction (intensity 1): implied by his possessive gesture towards the money and continued humming. Gaze: Forward, into the darkness. Lighting: The faint rim light now catches more detail on the texture of his old jacket. The surrounding darkness feels vast and empty. Camera/DoF: Medium close-up, 50mm lens, still tracking from behind. The composition remains off-center, emphasizing the encroaching darkness. Mood/Atmosphere: A false sense of security.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "镜头缓慢推近，特写李老四揣在兜里的手和摇晃的步伐，强化他得意放松的状态。",
+    "seed": 19930711,
+    "shot_id": "S003"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "近景，李老四停下脚步，下意识地摸向夹克口袋，脸上的笑容瞬间凝固，眉头微蹙。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": 0,
+    "isMainScene": 0,
+    "sceneId": null,
+    "text": "电棒（手电筒）却忘在了牌桌上。",
+    "sfx": [
+      {
+        "description": "哼唱声戛然而止",
+        "location": "中心",
+        "timing": "入点",
+        "volume": "中"
+      },
+      {
+        "description": "手在夹克上摸索的衣物摩擦声",
+        "location": "前景",
+        "timing": "持续",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: Dark night on a village path. Era and Region: Rural China, 1990s. Scene: The empty dirt road. Main Character: Li Laosi, identity reference from charactId 0. Subject & Action + Pose + Emotion: He has stopped walking and turned slightly towards the camera. His right hand is patting his jacket pocket, searching for something. Emotion: Sudden realization and annoyance (intensity 2): His previously relaxed face tightens, his smile vanishes, and his eyebrows furrow in confusion and slight panic. His eyes are wide for a moment. Gaze: His gaze is directed downwards towards his pocket, not at the camera. Lighting: Faint, diffused ambient light from above casts deep shadows on his face, highlighting the sudden tension in his features. Camera/DoF: Close-up shot, 35mm lens, fixed position, centered on his face and upper torso. Shallow depth of field blurs the dark background. Mood/Atmosphere: The calm is broken; tension is introduced.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "固定机位近景，李老四突然停步，脸上的笑容凝固，开始摸索口袋，表情由轻松转为惊觉。",
+    "seed": 19930711,
+    "shot_id": "S004"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "他撇了撇嘴，脸上转为一种无所谓的不屑表情，仿佛在嘲笑自己的大惊小怪。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": 0,
+    "isMainScene": 0,
+    "sceneId": null,
+    "text": "起初他并不在意，这条路闭着眼也能摸回去。",
+    "sfx": [
+      {
+        "description": "一个短暂、不祥的合成器音符，一闪而过",
+        "location": "全景/环境音",
+        "timing": "入点",
+        "volume": "弱"
+      }
+    ],
+    "prompt": "Environment: Dark night on a village path. Era and Region: Rural China, 1990s. Scene: The empty dirt road. Main Character: Li Laosi, identity reference from charactId 0. Subject & Action + Pose + Emotion: His hand drops from his pocket. He gives a dismissive shrug. Emotion: Feigned indifference and arrogance (intensity 1): He purses his lips into a slight sneer and rolls his eyes slightly, trying to brush off his initial concern with bravado. Gaze: He glances away into the darkness, avoiding looking at his empty pocket. Lighting: The same dim ambient light. The shift in his expression is subtle, visible in the slight change of shadows around his mouth and eyes. Camera/DoF: Close-up shot, 35mm lens, fixed position. The focus remains locked on his face to capture the micro-expression. Mood/Atmosphere: Hubris, a sense of impending doom.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "镜头保持不动，李老四的表情由惊觉变为不屑，他撇撇嘴，准备继续在黑暗中前行。",
+    "seed": 19930711,
+    "shot_id": "S004"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "李老四的主观视角，他继续往前走，但感觉脚下的路变得没有尽头，两边的景物似乎在拉伸。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": 0,
+    "isMainScene": 1,
+    "sceneId": "scene01",
+    "text": "可走着走着，脚下的土路变得异常绵软、漫长。",
+    "sfx": [
+      {
+        "description": "所有环境音消失",
+        "location": "全景/环境音",
+        "timing": "入点",
+        "volume": "中"
+      },
+      {
+        "description": "一声微弱、被放大的心跳声",
+        "location": "中心, 前景",
+        "timing": "入点",
+        "volume": "弱"
+      }
+    ],
+    "prompt": "Environment: Absolute darkness on the 'Ghost Wall' path. Era and Region: Rural China, 1990s. Scene: The supernatural dirt road from scene01. The path ahead seems to stretch unnaturally, and the blurred silhouettes of the gnarled trees on either side remain stubbornly the same, creating a sense of no progress. Subject & Action: The camera, representing Li Laosi's POV, moves forward. A subtle dolly zoom effect begins, where the camera tracks forward while the lens zooms out, making the background feel like it's warping and rushing towards the viewer. Lighting: Near-total darkness, rendered in a monochrome palette of black and grey. Only fuzzy outlines are visible. Camera/DoF: First-person POV, wide-angle lens (24mm). The perspective is distorted, creating a surreal, nightmarish feeling of spatial manipulation. Mood/Atmosphere: Disorienting, surreal, and the dawn of fear.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "第一人称视角，镜头向前移动，同时进行轻微的推轨变焦（Dolly Zoom），营造出道路在拉长、空间在扭曲的诡异感觉。",
+    "seed": 19930711,
+    "shot_id": "S005"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "主观视角下的环境变得愈发寂静，只能听到自己越来越粗重的呼吸声。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": 0,
+    "isMainScene": 1,
+    "sceneId": "scene01",
+    "text": "四周静得可怕，连秋虫都噤了声，只有自己粗重的呼吸和越来越快的心跳。",
+    "sfx": [
+      {
+        "description": "粗重的呼吸声，仿佛来自观众自己",
+        "location": "中心, 前景",
+        "timing": "持续",
+        "volume": "中"
+      },
+      {
+        "description": "心跳声变得更加清晰和快速",
+        "location": "中心, 前景",
+        "timing": "持续",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: The unnaturally silent 'Ghost Wall' path. Era and Region: Rural China, 1990s. Scene: The distorted, looping landscape of scene01. The visual information is minimal and repetitive, enhancing the feeling of being trapped. Subject & Action: The dolly zoom effect intensifies. The forward motion continues, but the scenery does not change, creating a profound sense of futility. Lighting: The image degrades further into a grainy, indistinct monochrome soup of blacks and greys. Camera/DoF: First-person POV, wide-angle lens (24mm). The spatial distortion is at its peak. The image might have a slight, pulsating blur in time with the heartbeat sound effect. Mood/Atmosphere: Rising panic, claustrophobia, and sensory deprivation.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "推轨变焦效果加强，周围环境的细节完全消失在黑暗中，画面随着心跳声的节奏产生微弱的脉动感。",
+    "seed": 19930711,
+    "shot_id": "S005"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "李老四的仰拍视角，他抬头望向天空，一轮本就模糊的月亮正被厚重的乌云缓慢吞噬。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": 0,
+    "isMainScene": 1,
+    "sceneId": "scene01",
+    "text": "头顶那轮本该清亮的毛月亮，不知何时也隐没在厚重的云层后，",
+    "sfx": [
+      {
+        "description": "风声再次响起，带着一种不祥的呜咽",
+        "location": "全景/环境音",
+        "timing": "持续",
+        "volume": "强"
+      },
+      {
+        "description": "心跳声达到顶峰，响如擂鼓",
+        "location": "中心, 前景",
+        "timing": "持续",
+        "volume": "强"
+      }
+    ],
+    "prompt": "Environment: A stormy, oppressive night sky. Era and Region: Rural China, 1990s. Scene: The sky above the 'Ghost Wall' path. Subject & Action: Thick, heavy, dark clouds are slowly but inexorably sliding across the sky, beginning to cover the faint, hazy glow of a pale moon. The movement is menacing and deliberate. Lighting: The only light source, the weak moon, is being extinguished. This casts the clouds in a dramatic, dark silhouette, creating a sense of cosmic dread. Camera/DoF: Low-angle shot, looking straight up. 85mm telephoto lens, compressing the clouds and making them feel closer and more threatening. Deep depth of field, keeping both the moon and clouds in focus. Mood/Atmosphere: Hope extinguishing, ultimate dread.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "仰拍镜头，画面中厚重的乌云缓慢移动，开始遮蔽天空中唯一微弱的光源——月亮。",
+    "seed": 19930711,
+    "shot_id": "S006"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "乌云完全遮蔽了月亮，画面陷入一片绝对的漆黑，最后一丝轮廓光也消失了。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": 0,
+    "isMainScene": 1,
+    "sceneId": "scene01",
+    "text": "一丝光也漏不下来。",
+    "sfx": [
+      {
+        "description": "在月亮被完全遮蔽的瞬间，所有声音（风声、心跳）戛然而止，陷入死寂",
+        "location": "全景/环境音",
+        "timing": "入点",
+        "volume": "强"
+      }
+    ],
+    "prompt": "Environment: The moment of total darkness. Era and Region: Rural China, 1990s. Scene: The sky above the 'Ghost Wall' path. Subject & Action: The last sliver of the moon's light disappears behind the thick cloud cover. The screen is now pure, undifferentiated black. Nothing is visible. Lighting: Non-existent. It is absolute black. Camera/DoF: The same low-angle 85mm shot, but now it captures nothing but darkness. Mood/Atmosphere: Total despair, isolation, the void.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "乌云完全吞噬了月亮，画面在瞬间变为绝对的黑暗，所有光线消失。",
+    "seed": 19930711,
+    "shot_id": "S006"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "手持跟拍，李老四猛地向左拐，但镜头快速摇过去，前方依然是笔直的、无尽的黑暗小路。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": 0,
+    "isMainScene": 1,
+    "sceneId": "scene01",
+    "text": "方向感消失了。 他明明记得该拐弯了，可迈出去的脚却总踩在笔直的路上；",
+    "sfx": [
+      {
+        "description": "急促、混乱的脚步声踩在泥土上",
+        "location": "前景",
+        "timing": "持续",
+        "volume": "强"
+      },
+      {
+        "description": "人物急促的喘息声",
+        "location": "前景",
+        "timing": "持续",
+        "volume": "强"
+      }
+    ],
+    "prompt": "Environment: The supernatural, looping path at night. Era and Region: Rural China, 1990s. Scene: The disorienting landscape of scene01. Main Character: Li Laosi, identity reference from charactId 0. Subject & Action + Pose + Emotion: In a chaotic, handheld shot, Li Laosi is seen from the side as he makes a sharp, desperate turn to his left, stumbling as he moves. The camera whips to follow his intended direction. Emotion: Frantic confusion (intensity 3): His body language is jerky and panicked. Gaze: He looks wildly in the direction he is turning. Lighting: The scene is lit only by an imagined, extremely dim ambient light, just enough to make out his frantic silhouette against the repeating, dark treeline. Camera/DoF: Handheld tracking shot, wide-angle lens, shaky and unstable. The whip pan is intentionally disorienting. Mood/Atmosphere: Panic, desperation, and supernatural entrapment.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "手持镜头剧烈晃动，跟随李老四猛地向一个方向冲去，但镜头快速摇过之后，前方的景象没有任何变化，依旧是那条无尽的黑路。",
+    "seed": 19930711,
+    "shot_id": "S007"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "李老四绝望地转过身，朝反方向快走几步后停下，眼前还是那片令人心悸的树林剪影。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": 0,
+    "isMainScene": 1,
+    "sceneId": "scene01",
+    "text": "他掉头往回走，走了半晌，眼前却还是那片熟悉的、令人心头发毛的漆黑树林轮廓——",
+    "sfx": [
+      {
+        "description": "树枝刮擦衣服的刺啦声",
+        "location": "前景, 偏左",
+        "timing": "入点",
+        "volume": "中"
+      },
+      {
+        "description": "一声压抑的、绝望的呻吟",
+        "location": "中心",
+        "timing": "出点",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: The inescapable, looping path. Era and Region: Rural China, 1990s. Scene: The exact same stretch of path from scene01. Main Character: Li Laosi, identity reference from charactId 0. Subject & Action + Pose + Emotion: He spins around 180 degrees and takes several quick, stumbling steps back the way he came, then freezes. He stands hunched over, hands on his knees, panting heavily. Emotion: Dawning horror and exhaustion (intensity 3): His posture is one of defeat, his body trembling. Gaze: He stares forward in disbelief at the identical scenery. Lighting: The dim, oppressive ambient light remains unchanged, reinforcing the monotony of his prison. Camera/DoF: The shaky handheld camera follows his turn and stops when he does, framing him against the terrifyingly familiar silhouette of the gnarled trees. Mood/Atmosphere: Utter hopelessness.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "李老四绝望地转身，朝反方向跑了几步又猛地停下，镜头随之急停，他喘着粗气，发现眼前的景象和刚才一模一样。",
+    "seed": 19930711,
+    "shot_id": "S007"
+  },
+  {
+    "frame_idx": 3,
+    "frame": "镜头切换为混乱的视角，快速地在李老四慌乱的脸和周围不变的黑暗环境之间切换。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": 0,
+    "isMainScene": 1,
+    "sceneId": "scene01",
+    "text": "他一直在原地打转！",
+    "sfx": [
+      {
+        "description": "急促、不和谐的打击乐进入，节奏混乱",
+        "location": "全景/环境音",
+        "timing": "持续",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: The psychological prison of the looping path. Era and Region: Rural China, 1990s. Scene: A rapid montage of shots within scene01. Main Character: Li Laosi, identity reference from charactId 0. Subject & Action + Pose + Emotion: A quick cut to a close-up of his face, contorted in terror. His head whips from side to side. This is intercut with blurry, chaotic whip pans of the unchanging dark trees. Emotion: Complete mental breakdown (intensity 3): His eyes are wide with terror, mouth agape in a silent scream. Gaze: His eyes dart everywhere, finding no escape. Lighting: The dim light catches the sweat on his face, making it glisten. The shadows are harsh and unforgiving. Camera/DoF: A rapid sequence of jump cuts and shaky close-ups, breaking spatial and temporal continuity to reflect his shattered mental state. Mood/Atmosphere: Sheer terror and madness.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "快速剪辑，镜头在李老四惊恐的脸部特写和他视角下飞速掠过的、一成不变的黑暗树林之间来回切换，营造出天旋地转的眩晕感。",
+    "seed": 19930711,
+    "shot_id": "S007"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "大特写，李老四惊恐的脸占满画面，汗珠从他额头滑落，眼中满是血丝。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": 0,
+    "isMainScene": 1,
+    "sceneId": "scene01",
+    "text": "一股寒意从脚底板直冲天灵盖。他想起了那些传说：",
+    "sfx": [
+      {
+        "description": "刺耳、高频的合成器音效，营造紧张感",
+        "location": "全景/环境音",
+        "timing": "持续",
+        "volume": "中"
+      },
+      {
+        "description": "几乎听不见的、幽灵般的低语声",
+        "location": "背景",
+        "timing": "入点",
+        "volume": "弱"
+      }
+    ],
+    "prompt": "Environment: The dark, terrifying path. Era and Region: Rural China, 1990s. Scene: The oppressive environment of scene01. Main Character: Li Laosi, identity reference from charactId 0. Subject & Action + Pose + Emotion: He is frozen in place, staring forward. A single bead of sweat traces a path down his temple. Emotion: Pure terror (intensity 3): His eyes are wide and bloodshot, fixed on an unseen horror. His face is pale and slick with sweat, his jaw locked in fear. Gaze: Staring straight ahead, through the camera, but not making eye contact. His focus is internal. Lighting: A single, faint, cool light source from the side carves his terrified features out of the darkness, creating harsh shadows and highlighting the texture of his skin and sweat. Camera/DoF: Extreme close-up, 50mm macro lens. The frame is filled entirely by his face. Extremely shallow depth of field. Mood/Atmosphere: Raw, visceral fear.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "镜头给到李老四脸部的大特写，他面色惨白，大汗淋漓，瞳孔因极度恐惧而放大，整个人僵在原地。",
+    "seed": 19930711,
+    "shot_id": "S008"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "画面叠化出模糊扭曲的村民面孔，如同鬼影一般，在他惊恐的脸上闪现。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": 0,
+    "isMainScene": 1,
+    "sceneId": "scene01",
+    "text": "王麻子在这里转到天亮，鞋底都磨穿了；张寡妇更是吓得大病一场……",
+    "sfx": [
+      {
+        "description": "低语声变得清晰一些，是几个不同村民的声音在重叠，内容听不清",
+        "location": "全景/环境音",
+        "timing": "持续",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: A psychological space of fear. Era and Region: Rural China, 1990s. Scene: A composite image. Main Character: Li Laosi, identity reference from charactId 0. Subject & Action + Pose + Emotion: His terrified face remains the base layer of the image. Overlaid on his face are ghostly, distorted, and semi-transparent images of other villagers' faces (an old man with pockmarks, a gaunt-looking woman), their expressions ones of suffering or fear. The effect is a disorienting visual blend. Emotion: Terror amplified by memory (intensity 3). Lighting: The harsh side light on Li Laosi's face remains, while the ghostly overlays have their own faint, ethereal glow. Camera/DoF: Extreme close-up, 50mm macro lens. The double-exposure effect creates a complex and disturbing texture. Mood/Atmosphere: A waking nightmare, psychological horror.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "在李老四的脸部特写上，缓慢叠化出几个模糊、扭曲、表情痛苦的村民面孔，如同闪回的鬼影，表现他内心的恐惧联想。",
+    "seed": 19930711,
+    "shot_id": "S008"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "画面闪回，一个看不清面容的老人坐在煤油灯下，嘴唇在开合，画面有颗粒感。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": 2,
+    "isMainScene": 0,
+    "sceneId": null,
+    "text": "",
+    "sfx": [
+      {
+        "description": "老人的话语声，经过混响处理，听起来遥远而空灵：'遇了‘挡’，莫慌...'",
+        "location": "全景/环境音",
+        "timing": "持续",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: A dimly lit, rustic interior at night. Era and Region: Rural China, 1990s. Scene: Inside a simple farmhouse. Main Character: The wise old man, identity reference from charactId 2. Subject & Action + Pose + Emotion: The old man is seen in a blurry close-up, his face mostly in shadow. He is sitting, and his mouth is moving as if speaking urgently. His features are indistinct, representing a faded memory. Emotion: Seriousness and wisdom (intensity 2): conveyed through the deliberate movement of his mouth. Gaze: Unclear due to the blur and shadow. Lighting: The scene is lit by a single, warm, flickering kerosene lamp from the side, casting long, dancing shadows. The image is grainy and has a dreamlike quality. Camera/DoF: Close-up, soft focus, handheld feel to simulate a memory. Mood/Atmosphere: Nostalgic, mysterious, a beacon of ancient wisdom.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "快速闪回镜头，画面模糊且充满噪点，一个老人的侧脸在摇曳的煤油灯光下开合着嘴，仿佛在诉说着什么。",
+    "seed": 19930711,
+    "shot_id": "S009"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "快速切回李老四的眼睛特写，恐惧中闪过一丝决绝，瞳孔中仿佛倒映着一丝火光。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": 0,
+    "isMainScene": 1,
+    "sceneId": "scene01",
+    "text": "老人们的话在他耳边炸响：“遇了‘挡’，莫慌，点个火，它怕亮！”",
+    "sfx": [
+      {
+        "description": "所有音乐和音效停止，只剩下之前的心跳声，但节奏变得沉稳有力",
+        "location": "中心, 前景",
+        "timing": "入点",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: The dark path. Era and Region: Rural China, 1990s. Scene: The oppressive darkness of scene01. Main Character: Li Laosi, identity reference from charactId 0. Subject & Action + Pose + Emotion: A sudden cut back to the present. Emotion: A shift from pure terror to desperate resolve (intensity 3): His eye is still wide, but the frantic fear is replaced by a focused, determined glint. He has found a sliver of hope. Gaze: His eye is fixed, staring with new purpose. Lighting: The faint side light catches his eye. A tiny, almost imperceptible spark of orange light is reflected in his pupil, foreshadowing the fire to come. Camera/DoF: Extreme close-up on his eye. The focus is razor-sharp on the iris and pupil, capturing the subtle emotional shift. Mood/Atmosphere: A turning point, a spark of hope in the abyss.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "镜头猛地切回李老四的眼睛大特写，他惊恐的眼神瞬间变得坚定，瞳孔里闪过一丝决绝的光。",
+    "seed": 19930711,
+    "shot_id": "S009"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "（插叙）明媚的秋日阳光下，长焦镜头扫过一排排晾晒在村路边的金黄色烟叶，前景虚化。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": null,
+    "isMainScene": 0,
+    "sceneId": null,
+    "text": "李家坳的日子，白天是浸在烟草香里的。",
+    "sfx": [
+      {
+        "description": "远处村民模糊的谈笑声",
+        "location": "背景",
+        "timing": "持续",
+        "volume": "弱"
+      },
+      {
+        "description": "翻动烟叶时发出的干爽的沙沙声",
+        "location": "前景",
+        "timing": "持续",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: A bright, sunny autumn afternoon. Era and Region: Rural China, 1990s. Scene: A dirt road in Li Family Hollow, lined with wooden racks. Subject & Action: Strings of golden-yellow tobacco leaves are hanging to dry, glowing in the sunlight. In the background, the blurred figures of villagers are busy working. The air is clear and filled with a golden haze. Lighting: Warm, bright, direct sunlight from a high angle, making the tobacco leaves almost translucent and creating a high-contrast, vibrant scene. The color palette is dominated by gold, yellow, and earthy browns. Camera/DoF: Long-focus lens (135mm) with a wide aperture (f/2.8), creating a very shallow depth of field. The camera pans slowly across the scene. The foreground leaves are beautifully blurred, creating a soft, dreamlike frame for the sharper background. Mood/Atmosphere: Warm, nostalgic, peaceful, full of life.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "长焦镜头，大光圈，画面从一串虚化的金黄烟叶后慢慢摇过，展现出阳光下村民们在路边晾晒烟叶的温暖、忙碌景象。",
+    "seed": 19930712,
+    "shot_id": "S010"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "镜头特写阳光洒在烟叶上的细节，叶脉清晰可见，色泽金黄诱人。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": null,
+    "isMainScene": 0,
+    "sceneId": null,
+    "text": "秋阳高照，家家户户把一绳绳金灿灿的烟叶铺展在路边，吸饱阳光，也浸润夜露的雾气。",
+    "sfx": [
+      {
+        "description": "舒缓、怀旧的乡土音乐起",
+        "location": "全景/环境音",
+        "timing": "入点",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: A bright, sunny autumn afternoon. Era and Region: Rural China, 1990s. Scene: A close-up of drying tobacco leaves. Subject & Action: A single, perfect tobacco leaf hangs in the sun. Its texture is rich and detailed, with every vein visible. Dust motes dance in the shafts of light passing through it. Lighting: Strong backlighting from the sun makes the leaf glow with an intense golden-orange light. The light is warm and inviting. Camera/DoF: Macro shot, focusing on the intricate details of the leaf. The background is completely blurred into a soft, warm bokeh. Mood/Atmosphere: Idyllic, sensory, a celebration of the harvest and rural life.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "镜头给到烟叶的特写，阳光穿透金黄色的叶片，叶脉清晰可见，空气中仿佛有尘埃在飞舞，画面温暖而富有质感。",
+    "seed": 19930712,
+    "shot_id": "S010"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "（插叙）镜头从窗外向内拍摄，一盏煤油灯照亮烟雾缭绕的牌桌，几个村民正投入地打着麻将。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": null,
+    "isMainScene": 0,
+    "sceneId": null,
+    "text": "白天劳作，晚上便是牌桌的天下。煤油灯下，噼啪的麻将声和乡谈笑语能响到半夜，",
+    "sfx": [
+      {
+        "description": "清脆的麻将牌碰撞声",
+        "location": "中心",
+        "timing": "持续",
+        "volume": "中"
+      },
+      {
+        "description": "村民的说笑声和争论声",
+        "location": "中心",
+        "timing": "持续",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: Night, inside a simple village house. Era and Region: Rural China, 1990s. Scene: A cramped room with earthen walls. A wooden table sits in the center. Group: Four middle-aged male villagers, faces weathered from farm work, wearing simple shirts, are gathered around the table, deeply engrossed in a game of mahjong. Subject & Action: One man is about to slam a tile onto the table. The air is thick with cigarette smoke, which curls and catches the light. Lighting: A single kerosene lamp on the table is the primary light source, casting a warm, yellow, dramatic light on the players' faces and hands, and creating deep shadows that fill the rest of the room. Camera/DoF: Medium shot, filmed from outside, looking in through a wooden window frame. The window acts as a natural frame for the scene. Moderate depth of field keeps the players in focus. Mood/Atmosphere: Communal, lively, a slice of authentic rural life.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "镜头透过一扇老旧的木窗，向屋内拍摄，展现煤油灯下烟雾缭绕的牌局，村民们表情专注，气氛热烈。",
+    "seed": 19930712,
+    "shot_id": "S011"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "镜头焦点从屋内转移到窗外，两个村民打着手电筒走过，光柱在黑暗中晃动。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": null,
+    "isMainScene": 0,
+    "sceneId": null,
+    "text": "然后，人们才三三两两，亮着或明或暗的电棒光柱，融进那无边的夜色里。",
+    "sfx": [
+      {
+        "description": "屋内的麻将声和说笑声变为背景音",
+        "location": "背景",
+        "timing": "持续",
+        "volume": "弱"
+      }
+    ],
+    "prompt": "Environment: Night, outside a village house. Era and Region: Rural China, 1990s. Scene: The same window frame, but the focus has shifted. Subject & Action: Outside in the pitch-black night, two figures walk past. They are visible only as silhouettes. One holds an old-fashioned flashlight ('电棒'), which casts a weak, circular beam of light that sweeps across the ground as they walk. Lighting: The warm light from the window now illuminates the foreground window frame, while the main subject is the moving beam from the flashlight cutting through the exterior darkness. The scene outside is otherwise completely black. Camera/DoF: Rack focus. The focus pulls from the mahjong game inside to the figures walking outside. The indoor scene becomes a warm, blurry backdrop. Mood/Atmosphere: A transition from communal warmth to the vast, lonely darkness of the night.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "镜头焦点从屋内的牌局平滑地转移到窗外的黑夜，两道手电筒的光柱晃动着从画面前走过，最终消失在黑暗中。",
+    "seed": 19930712,
+    "shot_id": "S011"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "切回当下，近景，李老四背靠着一棵看不清的树干，双手哆嗦着在全身口袋里疯狂摸索。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": 0,
+    "isMainScene": 1,
+    "sceneId": "scene01",
+    "text": "",
+    "sfx": [
+      {
+        "description": "紧张的弦乐再次响起",
+        "location": "全景/环境音",
+        "timing": "入点",
+        "volume": "中"
+      },
+      {
+        "description": "急促的衣物摩擦声",
+        "location": "前景",
+        "timing": "持续",
+        "volume": "强"
+      },
+      {
+        "description": "压抑不住的、急促的喘息声",
+        "location": "前景",
+        "timing": "持续",
+        "volume": "强"
+      }
+    ],
+    "prompt": "Environment: The inescapable dark path. Era and Region: Rural China, 1990s. Scene: Li Laosi is lost in scene01. Main Character: Li Laosi, identity reference from charactId 0. Subject & Action + Pose + Emotion: He is leaning heavily against a large tree trunk, which is barely visible. His whole body is trembling. His hands move with frantic, clumsy urgency, patting and digging into every pocket on his jacket and trousers. Emotion: Desperate hope (intensity 3): His movements are driven by a desperate, last-ditch survival instinct. His face, though mostly in shadow, is a mask of frantic concentration. Gaze: His eyes are wide, looking down at his own body as he searches. Lighting: The scene is plunged back into near-total darkness. A sliver of faint, cool ambient light catches the frantic motion of his hands and the rough texture of the tree bark. Camera/DoF: Close-up shot, handheld, closely following the chaotic motion of his hands. The shaking of the camera mirrors his own trembling. Mood/Atmosphere: Tense, desperate, a race against time.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "手持镜头紧跟李老四的动作，他背靠树干，双手因恐惧而剧烈颤抖，笨拙而又急切地在全身的口袋里摸索着什么。",
+    "seed": 19930711,
+    "shot_id": "S012"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "特写他颤抖的手，终于在一个口袋里摸到了一个火柴盒，指尖因用力而发白。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": 0,
+    "isMainScene": 1,
+    "sceneId": "scene01",
+    "text": "李老四哆嗦着摸遍全身口袋，火柴！万幸还有半盒！",
+    "sfx": [
+      {
+        "description": "手指碰到火柴盒的轻微碰撞声",
+        "location": "前景",
+        "timing": "入点",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: The dark path. Era and Region: Rural China, 1990s. Scene: The darkness of scene01. Main Character: Li Laosi's hands. Subject & Action + Pose + Emotion: A tight shot on his trembling hand as it closes around a small, worn cardboard matchbox inside his trouser pocket. His knuckles are white from the tension and cold. The hand slowly, carefully pulls the box out. Emotion: A surge of relief and hope (intensity 3): conveyed entirely through the tense, yet successful, action of his hand. Lighting: The faint ambient light catches the dirt under his fingernails and the worn edges of the matchbox, emphasizing the desperation of the moment. Camera/DoF: Extreme close-up on the hand and pocket. The focus is razor-sharp on the matchbox, the object of all hope. Mood/Atmosphere: A moment of profound relief amidst terror.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "镜头给到手部特写，一只颤抖的手终于在口袋深处摸到了一个火柴盒，并紧紧地将它攥住。",
+    "seed": 19930711,
+    "shot_id": "S012"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "大特写，慢动作。李老四的手抖得厉害，第一根火柴划过火柴盒侧面，没有燃起，木杆断裂。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": 0,
+    "isMainScene": 1,
+    "sceneId": "scene01",
+    "text": "他背靠着冰冷的树干，抖着手，“嚓！”第一根，没着。",
+    "sfx": [
+      {
+        "description": "被放大、拉长的刺耳的火柴划过磷纸的声音",
+        "location": "前景",
+        "timing": "持续",
+        "volume": "强"
+      },
+      {
+        "description": "音乐用一声沉重的鼓点击中失败的瞬间",
+        "location": "全景/环境音",
+        "timing": "出点",
+        "volume": "强"
+      }
+    ],
+    "prompt": "Environment: The dark path. Era and Region: Rural China, 1990s. Scene: The darkness of scene01. Main Character: Li Laosi's hands. Subject & Action + Pose + Emotion: Filmed in high-speed for slow-motion playback. An extreme close-up shows his trembling fingers striking a match against the box. The match head scrapes across the striking surface, leaving a faint dark streak, but fails to ignite. The force and trembling cause the thin wooden stick to snap. Emotion: Crushing disappointment and rising panic (intensity 3): conveyed through the violent trembling and the failure of the simple action. Lighting: The only light is the faint, cool ambient light, which glints off his sweaty skin. Camera/DoF: Extreme macro shot, high-speed camera (e.g., 240fps). The focus is on the point of contact between the match head and the box. Mood/Atmosphere: Excruciating tension.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "高速摄影下的慢动作特写，第一根火柴因手的剧烈颤抖而划偏，在刺耳的摩擦声中折断，没有点燃。",
+    "seed": 19930711,
+    "shot_id": "S013"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "大特写，慢动作。第二根火柴划过，冒出一闪即逝的火星，旋即熄灭在黑暗中。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": 0,
+    "isMainScene": 1,
+    "sceneId": "scene01",
+    "text": "“嚓！”第二根，只冒了个火星就熄了。",
+    "sfx": [
+      {
+        "description": "第二次刺耳的摩擦声",
+        "location": "前景",
+        "timing": "持续",
+        "volume": "强"
+      },
+      {
+        "description": "火星熄灭时微弱但清晰的“噗”声",
+        "location": "前景",
+        "timing": "出点",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: The dark path. Era and Region: Rural China, 1990s. Scene: The darkness of scene01. Main Character: Li Laosi's hands. Subject & Action + Pose + Emotion: High-speed, slow-motion shot. His hand, shaking even more violently, strikes a second match. This time, a small shower of sparks erupts from the match head. For a fraction of a second, the sparks illuminate his trembling fingers. Then, just as quickly, they die, plunging the scene back into darkness. Emotion: A flicker of hope immediately extinguished, leading to deeper despair (intensity 3). Lighting: For one brief moment, the sparks provide a tiny, harsh, orange light source, then it's gone. Camera/DoF: Extreme macro shot, high-speed camera. The focus tracks the sparks as they fly and die. Mood/Atmosphere: Heartbreak, failure, escalating tension.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "高速摄影下的慢动作特写，第二根火柴划着，迸发出一丛微弱的火星，但火星在空中一闪即逝，再次归于黑暗。",
+    "seed": 19930711,
+    "shot_id": "S013"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "李老四用尽全身力气划下第三根火柴，一簇顽强的橘红色火苗猛地燃起。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": 0,
+    "isMainScene": 1,
+    "sceneId": "scene01",
+    "text": "他深吸一口气，几乎是吼出来，“嚓——！”第三根火柴终于顽强地燃起一小簇橘红的火苗。",
+    "sfx": [
+      {
+        "description": "一声响亮、清晰、充满决心的划火柴声",
+        "location": "前景",
+        "timing": "入点",
+        "volume": "强"
+      },
+      {
+        "description": "火焰“呼”地一声燃起的爆燃声",
+        "location": "前景",
+        "timing": "入点",
+        "volume": "强"
+      }
+    ],
+    "prompt": "Environment: The dark path. Era and Region: Rural China, 1990s. Scene: The darkness of scene01. Main Character: Li Laosi's hands. Subject & Action + Pose + Emotion: Normal speed. A close-up on his hands. He takes a deep, steadying breath, then strikes the third and final match with a powerful, deliberate motion. A bright, vigorous orange flame erupts, sputtering to life. Emotion: Ultimate effort and triumphant success (intensity 3): The motion is no longer just trembling, but filled with raw, desperate power. Lighting: The sudden flame becomes the sole, powerful light source. It casts a warm, flickering, orange glow, creating a stark contrast with the absolute blackness that surrounds it. Camera/DoF: Close-up on the hands and the matchbox. The focus is locked on the burgeoning flame. Mood/Atmosphere: Triumph, salvation, the sacredness of light.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "镜头从手部特写开始，随着第三根火柴被决绝地划燃，镜头缓慢拉出，火光瞬间照亮了李老四的脸。",
+    "seed": 19930711,
+    "shot_id": "S014"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "火光照亮了李老四布满汗水和恐惧的脸，他的眼中倒映着这簇神圣的火苗。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": 0,
+    "isMainScene": 1,
+    "sceneId": "scene01",
+    "text": "那微弱的光圈，在绝对的黑暗里显得如此脆弱，却又如此神圣。",
+    "sfx": [
+      {
+        "description": "所有紧张音乐停止，一段安静、带有希望感的圣咏式音乐缓缓进入",
+        "location": "全景/环境音",
+        "timing": "入点",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: The dark path, now illuminated by a single match. Era and Region: Rural China, 1990s. Scene: A small circle of light within scene01. Main Character: Li Laosi, identity reference from charactId 0. Subject & Action + Pose + Emotion: The camera has pulled back to a close-up of his face. He stares, mesmerized, at the flame just out of frame below him. His face is a canvas of conflicting emotions. Emotion: Awe, relief, and lingering terror (intensity 3): Sweat covers his face, his eyes are still wide with fear, but now there's a profound sense of relief and reverence. The tiny flame is reflected in his pupils. Gaze: Fixed downwards on the match flame. Lighting: The single match flame provides a dramatic under-lighting (Chiaroscuro), casting long, dancing shadows upwards across his face and highlighting every bead of sweat and every line of fear. Camera/DoF: Close-up on his face. Shallow depth of field, the background is a soft, absolute black. Mood/Atmosphere: Sacred, fragile, a moment of profound deliverance.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "镜头定格在李老四的脸上，唯一的火光从下方照亮他，他的表情混合着劫后余生的庆幸和尚未消散的恐惧，眼中映着跳动的火焰。",
+    "seed": 19930711,
+    "shot_id": "S014"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "近景，李老四小心翼翼地用另一只手护着火苗，从口袋里摸出一根皱巴巴的烟卷，凑近火苗。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": 0,
+    "isMainScene": 1,
+    "sceneId": "scene01",
+    "text": "他赶紧护着火苗，又摸出根皱巴巴的烟卷，就着火点着，",
+    "sfx": [
+      {
+        "description": "火焰燃烧的稳定嘶嘶声",
+        "location": "前景",
+        "timing": "持续",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: The small circle of light in the darkness. Era and Region: Rural China, 1990s. Scene: The illuminated space of scene01. Main Character: Li Laosi, identity reference from charactId 0. Subject & Action + Pose + Emotion: His hands are now the focus. One hand holds the precious match, while the other cups around it protectively. His fingers carefully bring the tip of a crumpled, hand-rolled cigarette towards the flame. Emotion: Cautious and deliberate (intensity 2): His previous frantic movements are gone, replaced by a slow, careful precision, desperate not to lose the light. Gaze: Intently focused on the task of lighting the cigarette. Lighting: The match flame is the key light, illuminating his hands and the cigarette with a warm, intimate glow. Camera/DoF: Close-up, focusing on his hands and the cigarette. The shallow depth of field keeps his face slightly out of focus in the background. Mood/Atmosphere: Ritualistic, a small act of regaining control.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "镜头聚焦于李老四的双手，他一只手小心地护着火柴的火苗，另一只手将一支烟凑过去，动作缓慢而专注。",
+    "seed": 19930711,
+    "shot_id": "S015"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "他深深地吸了一口烟，烟头猛地亮起，他吐出一口浓烟，烟雾在火光中缭绕，他的表情略微放松下来。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": 0,
+    "isMainScene": 1,
+    "sceneId": "scene01",
+    "text": "狠狠吸了一口。辛辣的烟雾呛得他咳嗽，却奇异地带来一丝暖意和镇定。",
+    "sfx": [
+      {
+        "description": "一声深长的、带着颤音的吸烟声",
+        "location": "前景",
+        "timing": "入点",
+        "volume": "强"
+      },
+      {
+        "description": "被烟呛到后的一声短促压抑的咳嗽",
+        "location": "前景",
+        "timing": "出点",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: The circle of light. Era and Region: Rural China, 1990s. Scene: The illuminated darkness of scene01. Main Character: Li Laosi, identity reference from charactId 0, a hand-rolled cigarette now dangling from his lips. Subject & Action + Pose + Emotion: He takes a deep, desperate drag from the cigarette. The cherry flares up, momentarily becoming the brightest point of light. He then exhales a thick cloud of smoke, which catches the light beautifully. Emotion: Calming down (intensity 1): The tension in his face finally begins to ease. His shoulders slump slightly as the nicotine hits. A sense of warmth and grounding returns. Gaze: His eyes are half-closed as he exhales, a classic expression of smoking's relief. Lighting: The scene is now lit by two sources: the dying match flame and the bright, pulsing cherry of the cigarette. The smoke creates volumetric light effects. Camera/DoF: Close-up on his face. The focus is on his mouth and the glowing cigarette tip. Mood/Atmosphere: A fragile sense of peace, warmth, and returning humanity.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "烟头被点燃，在吸气时猛地亮起，照亮李老四的下半张脸。他吐出一大口烟，烟雾在微弱的光线下盘旋上升，他紧绷的表情有了一丝松弛。",
+    "seed": 19930711,
+    "shot_id": "S015"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "李老四的主观视角，镜头对准他的脚，他试探性地迈出一步，脚边的烟头发出猩红的光芒，照亮了脚下的土路。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": "0",
+    "isMainScene": 1,
+    "sceneId": "scene01",
+    "text": "说来也怪，当他叼着那点猩红的烟火，试探着再次迈步时，",
+    "sfx": [
+      {
+        "description": "布鞋在泥土上摩擦的沙沙声",
+        "location": "中心, 前景",
+        "timing": "持续",
+        "volume": "中"
+      },
+      {
+        "description": "微弱的、空旷的风声",
+        "location": "全景/环境音",
+        "timing": "持续",
+        "volume": "弱"
+      }
+    ],
+    "prompt": "Environment: Dead of night, overcast, moonless. Era and Region: Rural China, circa 1990s. Scene: A desolate, unpaved dirt road flanked by harvested tobacco fields, enveloped in oppressive darkness. Main Character: Use the attached image as the identity reference for Li Laosi; preserve the role's facial features and hairstyle; wearing a faded, dark blue worn-out work jacket and dark, dusty trousers with simple cloth shoes. Subject & Action + Pose + Emotion + Gaze: First-person subjective view, looking down at his own feet. One cloth-shoed foot is poised mid-stride, hesitating just above the dark earth. A hand-rolled cigarette dangles from his lips, its glowing red ember casting a small, dramatic pool of crimson light on the ground and his leg. Emotion: Tense and cautious (intensity 2): Body is coiled with apprehension. Gaze is fixed on the ground ahead. Lighting: The single, tiny glowing cigarette tip is the key light, creating harsh, long shadows and leaving everything else in near-total blackness. Camera/DoF: Subjective POV shot, low angle, extremely shallow DoF focusing on the foot and the patch of illuminated ground. Mood/Atmosphere: Claustrophobic, tense, disorienting.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "主观视角，镜头先对准地面，一只脚试探性地迈出，然后镜头缓缓向上抬起，跟随视线望向前方，一条新的岔路在烟头光芒的边缘显现出来。",
+    "seed": 19930711,
+    "shot_id": "S016"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "镜头从脚部向上摇起，跟随李老四的视线，在烟头光芒的照射范围边缘，一条之前不存在的岔路模糊地显现出来。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": "0",
+    "isMainScene": 1,
+    "sceneId": "scene01",
+    "text": "脚下那条“笔直”的路，竟在几步之外悄然出现了一个他刚才怎么也找不到的岔口！",
+    "sfx": [
+      {
+        "description": "表示“揭示”或“转折”的合成音效，低沉而神秘",
+        "location": "全景/环境音",
+        "timing": "入点",
+        "volume": "中"
+      },
+      {
+        "description": "李老四倒抽一口凉气的声音",
+        "location": "中心, 前景",
+        "timing": "入点",
+        "volume": "弱"
+      }
+    ],
+    "prompt": "Environment: Dead of night, overcast, moonless. Era and Region: Rural China, circa 1990s. Scene: A desolate, unpaved dirt road flanked by harvested tobacco fields, enveloped in oppressive darkness. Main Character: Use the attached image as the identity reference for Li Laosi; preserve the role's facial features and hairstyle; wearing a faded, dark blue worn-out work jacket and dark, dusty trousers. Subject & Action + Pose + Emotion + Gaze: First-person subjective view, looking forward. At the very edge of the faint crimson light cast by his cigarette, a previously unseen, narrow fork in the path materializes out of the pitch-black darkness, its lines blurry and uncertain. Emotion: Shock and disbelief (intensity 3): A subtle tremor in the viewpoint suggests a startled reaction. Gaze is locked onto the newly appeared path. Lighting: The single, tiny glowing cigarette tip is the key light, its weak light barely piercing the gloom. The new path is a silhouette against a slightly less black background. Camera/DoF: Subjective POV shot, eye-level, deep DoF trying to resolve the distant path. Mood/Atmosphere: Supernatural, revelatory, a glimmer of hope mixed with profound dread.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "主观视角，镜头先对准地面，一只脚试探性地迈出，然后镜头缓缓向上抬起，跟随视线望向前方，一条新的岔路在烟头光芒的边缘显现出来。",
+    "seed": 19930711,
+    "shot_id": "S016"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "远景固定机位，李老四惊慌失措地冲上岔路，踉跄的背影在画面中逐渐变小。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": "0",
+    "isMainScene": 1,
+    "sceneId": "scene01",
+    "text": "他几乎是连滚带爬地冲了出去，",
+    "sfx": [
+      {
+        "description": "慌乱、沉重的脚步声在泥土上奔跑",
+        "location": "中心",
+        "timing": "持续",
+        "volume": "中"
+      },
+      {
+        "description": "急促、恐惧的喘息声",
+        "location": "中心",
+        "timing": "持续",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: Dead of night, overcast, moonless. Era and Region: Rural China, circa 1990s. Scene: The exit of the supernatural loop, a narrow dirt path leading away from a patch of absolute darkness into a more normal, dimly moonlit nightscape. Main Character: Use the attached image as the identity reference for Li Laosi; preserve the role's facial features and hairstyle; wearing his work jacket and trousers. Subject & Action + Pose + Emotion + Gaze: Li Laosi is seen from behind, scrambling and stumbling away from the camera down the path. His posture is a frantic crouch as he runs for his life. Emotion: Pure panic (intensity 3): His movements are clumsy and desperate. He doesn't look back. Lighting: The scene is dimly lit by ambient night light. The area he is running from is a void of pure black. Camera/DoF: Long shot, fixed camera, eye-level. Deep DoF. Mood/Atmosphere: Desperate escape, relief mixed with terror.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "固定机位远景，李老四的背影从近处连滚带爬地跑向远处，身影越来越小，最终融入远方的正常夜色中。在他身后的黑暗中，空气出现一丝轻微的扭曲。",
+    "seed": 19930711,
+    "shot_id": "S017"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "李老四的背影已经远去，在他身后那片凝滞的黑暗中，空气仿佛发生了一丝难以察觉的扰动，像一声叹息。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": "",
+    "isMainScene": 1,
+    "sceneId": "scene01",
+    "text": "背后那团凝滞的黑暗，仿佛传来一声无声的叹息。",
+    "sfx": [
+      {
+        "description": "脚步声和喘息声迅速远去、消失",
+        "location": "背景",
+        "timing": "出点",
+        "volume": "弱"
+      },
+      {
+        "description": "一声几乎听不见的、非常低沉的叹息声，仿佛是风声",
+        "location": "画面中心, 背景",
+        "timing": "入点",
+        "volume": "弱"
+      }
+    ],
+    "prompt": "Environment: Dead of night, overcast, moonless. Era and Region: Rural China, circa 1990s. Scene: The now-empty dirt path where the supernatural event occurred. The path itself is faintly visible, but the area immediately behind the camera's viewpoint is an unnerving patch of impenetrable, solid blackness. Subject & Action + Pose + Emotion + Gaze: The scene is static and empty of people. The only 'action' is a subtle, almost imperceptible heat-haze-like shimmer or distortion in the air within the pitch-black area, suggesting a presence has just departed. Lighting: Extremely dim ambient night light barely illuminates the path. The darkness is absolute and non-reflective. Camera/DoF: Long shot, fixed camera, eye-level. Deep DoF. Mood/Atmosphere: Eerie, unsettling, lingering mystery, the quiet after a storm.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "固定机位远景，李老四的背影从近处连滚带爬地跑向远处，身影越来越小，最终融入远方的正常夜色中。在他身后的黑暗中，空气出现一丝轻微的扭曲。",
+    "seed": 19930711,
+    "shot_id": "S017"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "白天，村口，村长表情严肃地站在众人面前，背景是蓝天和金色的烟叶。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": "1",
+    "isMainScene": 0,
+    "sceneId": "",
+    "text": "李老四的遭遇成了压垮骆驼的最后一根稻草。这“挡”害人不浅，不能再留！",
+    "sfx": [
+      {
+        "description": "人群低沉的嗡嗡议论声",
+        "location": "背景",
+        "timing": "持续",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: Bright, clear autumn afternoon, sunny. Era and Region: Rural Chinese village, circa 1990s. Scene: The village entrance, with racks of drying golden tobacco leaves and simple farmhouses in the background under a clear blue sky. Main Character: Use the attached image as the identity reference for the Village Chief; preserve the role's facial features and hairstyle; wearing a clean, dark gray Zhongshan suit jacket. Subject & Action + Pose + Emotion + Gaze: The Village Chief stands resolutely, addressing an unseen crowd. His hands are on his hips. Emotion: Stern and determined (intensity 3): His jaw is set, brow furrowed, and eyes sharp with conviction. Gaze is directed slightly off-camera, as if speaking to the villagers. Lighting: Bright, direct sunlight from high above, creating strong, clear shadows and highlighting the texture of his face and clothing. Camera/DoF: Medium shot, slight low angle to convey authority, ~50mm lens, moderate DoF. Mood/Atmosphere: Authoritative, resolute, a call to action.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "中景，略微仰拍村长，他表情严肃地对村民训话，然后镜头切换为从他背后过肩拍摄村民们凝重的表情。",
+    "seed": 19930713,
+    "shot_id": "S018"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "从村长背后过肩拍摄，一群手持农具的壮汉表情严肃地聆听着。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": "1",
+    "isMainScene": 0,
+    "sceneId": "",
+    "text": "几天后，村长召集了十几个胆大的汉子，扛着锄头铁锹，大白天地开进了南头那片邪性地界。",
+    "sfx": [
+      {
+        "description": "农具（铁锹、锄头）之间轻微的碰撞声",
+        "location": "前景",
+        "timing": "持续",
+        "volume": "弱"
+      },
+      {
+        "description": "坚定有力的鼓点音乐进入",
+        "location": "全景/环境音",
+        "timing": "入点",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: Bright, clear autumn afternoon, sunny. Era and Region: Rural Chinese village, circa 1990s. Scene: The village entrance, with racks of drying golden tobacco leaves in the background. Main Character: The back of the Village Chief's head and shoulder are in the foreground. Subject & Action + Pose + Emotion + Gaze: Group Lock: A group of about a dozen middle-aged Chinese farmers, with weather-beaten faces, wearing simple work clothes, standing in a loose crowd. They are holding farm tools like shovels and pickaxes. Emotion: Grim and serious (intensity 2): Their faces are attentive and somber, reflecting the gravity of the situation. Gaze is fixed on the Village Chief. Lighting: Bright, direct sunlight illuminates the villagers' faces. Camera/DoF: Over-the-shoulder shot from behind the chief, eye-level, moderate DoF, focusing on the faces of the villagers. Mood/Atmosphere: Communal resolve, tension, preparation for a confrontation.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "中景，略微仰拍村长，他表情严肃地对村民训话，然后镜头切换为从他背后过肩拍摄村民们凝重的表情。",
+    "seed": 19930713,
+    "shot_id": "S018"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "全景镜头，一群村民站在事发小路上，阳光透过树叶洒下斑驳光影，气氛凝重。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": "",
+    "isMainScene": 0,
+    "sceneId": "",
+    "text": "阳光刺眼，烟草香依旧浓烈，但每个人心头都沉甸甸的。",
+    "sfx": [
+      {
+        "description": "风吹过树叶的沙沙声",
+        "location": "全景/环境音",
+        "timing": "持续",
+        "volume": "弱"
+      }
+    ],
+    "prompt": "Environment: Bright daytime, sunny. Era and Region: Rural China, circa 1990s. Scene: A narrow dirt path cutting through a harvested tobacco field, flanked by sparse trees. Subject & Action + Pose + Emotion + Gaze: Group Lock: A group of over a dozen Chinese farmers, including the Village Chief and Li Laosi, stand clustered on the path. They are holding shovels and pickaxes, but are currently inactive, surveying the area. Emotion: Tense and apprehensive (intensity 2): Despite the bright daylight, their postures are stiff and their faces are grim and watchful. Gaze is directed towards the ground and the surrounding area. Lighting: Bright sunlight filters through the tree leaves, creating a pattern of dappled light and sharp shadows on the ground and the men. Camera/DoF: Wide shot, fixed camera, eye-level, using a wide-angle lens (~24mm) to capture the entire group and the environment. Deep DoF. Mood/Atmosphere: Eerie tension in broad daylight, a sense of trespassing on haunted ground.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "全景固定机位，展现村民们站在小路上的群像，李老四走上前，在地上用脚画了一个圈，村民们拿起工具准备动工。",
+    "seed": 19930713,
+    "shot_id": "S019"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "李老四弯下腰，用手指在地上画了一个圈，指认范围，村长和村民们围在他身边，准备动工。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": "0",
+    "isMainScene": 0,
+    "sceneId": "",
+    "text": "他们凭着记忆，在李老四打转的地方画了个圈，然后，锄头狠狠刨了下去！",
+    "sfx": [
+      {
+        "description": "一把铁锹被重重放在地上的金属声",
+        "location": "画面右侧, 前景",
+        "timing": "入点",
+        "volume": "中"
+      },
+      {
+        "description": "鼓点音乐变得低沉、紧张",
+        "location": "全景/环境音",
+        "timing": "持续",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: Bright daytime, sunny. Era and Region: Rural China, circa 1990s. Scene: A narrow dirt path. Main Character: Use the attached image as the identity reference for Li Laosi; preserve the role's facial features and hairstyle. Subject & Action + Pose + Emotion + Gaze: Li Laosi is crouched down, using his finger to trace a circle on the dirt ground. Emotion: Lingering fear and concentration (intensity 2): His face is focused on the task, but his eyes still hold a trace of the terror he experienced. Gaze is fixed on the ground. Group Lock: The Village Chief and several other farmers stand around Li Laosi, looking down at the circle he is drawing. They are holding their tools at the ready. Their faces are grim and resolute. Lighting: Dappled sunlight creates complex shadows on the figures. Camera/DoF: Medium shot, slightly high angle, focusing on Li Laosi and the immediate group around him. Moderate DoF. Mood/Atmosphere: The calm before the storm, ritualistic preparation, mounting tension.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "全景固定机位，展现村民们站在小路上的群像，李老四走上前，在地上用脚画了一个圈，村民们拿起工具准备动工。",
+    "seed": 19930713,
+    "shot_id": "S019"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "俯拍特写，一把铁锹正用力刨入土中，泥土飞溅。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": "",
+    "isMainScene": 0,
+    "sceneId": "",
+    "text": "挖到将近一人深时，",
+    "sfx": [
+      {
+        "description": "锄头用力挖土的声音，一次又一次",
+        "location": "中心, 前景",
+        "timing": "持续",
+        "volume": "强"
+      }
+    ],
+    "prompt": "Environment: Bright daytime. Era and Region: Rural China, circa 1990s. Scene: A deepening pit of reddish-brown earth. Subject & Action + Pose + Emotion + Gaze: The metal head of a shovel, caked with dirt, is captured mid-swing as it plunges forcefully into the soil, sending a spray of earth upwards. Only the shovel and the immediate patch of ground are visible. Lighting: Harsh, direct sunlight from above illuminates the scene, highlighting the texture of the soil and the metal. Camera/DoF: Top-down close-up shot, capturing the raw force of the action. Very shallow DoF, focused on the point of impact. Mood/Atmosphere: Energetic, determined, focused on the physical labor.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "从俯拍铁锹挖土的特写镜头，突然“咚”的一声，铁锹停住，镜头快速拉开，展现出挖土的汉子手臂被震得一麻，周围所有人都停下动作望过来的情景。",
+    "seed": 19930713,
+    "shot_id": "S020"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "铁锹突然“咚”的一声停住，镜头拉开到中景，挖土的汉子手臂一麻，所有人都停下动作，惊愕地望向那个点。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": "",
+    "isMainScene": 1,
+    "sceneId": "scene02",
+    "text": "“咚！”一声闷响，铁锹碰到了硬物。",
+    "sfx": [
+      {
+        "description": "一声沉重、结实的“咚”的闷响，带有震动感",
+        "location": "中心, 前景",
+        "timing": "入点",
+        "volume": "强"
+      },
+      {
+        "description": "所有挖土声和音乐戛然而止",
+        "location": "全景/环境音",
+        "timing": "入点",
+        "volume": "强"
+      }
+    ],
+    "prompt": "Environment: Bright daytime. Era and Region: Rural China, circa 1990s. Scene: A man-sized earthen pit, surrounded by piles of dirt. Subject & Action + Pose + Emotion + Gaze: Group Lock: A group of farmers are frozen mid-action in and around the pit. The central figure is a man holding a shovel that is stuck in the ground, his arm tensed from the impact. Emotion: Sudden shock and surprise (intensity 3): All faces are turned towards the stuck shovel, expressions of alarm and curiosity. Mouths are slightly agape, eyes wide. Gaze is locked on the point of impact. Lighting: Harsh, direct sunlight casts sharp shadows inside the pit. Camera/DoF: Medium shot from the edge of the pit, looking down at the scene. Moderate DoF, capturing the reactions of several villagers. Mood/Atmosphere: Abrupt tension, mystery, a pivotal moment of discovery.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "从俯拍铁锹挖土的特写镜头，突然“咚”的一声，铁锹停住，镜头快速拉开，展现出挖土的汉子手臂被震得一麻，周围所有人都停下动作望过来的情景。",
+    "seed": 19930713,
+    "shot_id": "S020"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "手部特写，村民们小心翼翼地用手和工具清理着泥土，动作轻柔而紧张。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": "",
+    "isMainScene": 1,
+    "sceneId": "scene02",
+    "text": "扒开周围的浮土，",
+    "sfx": [
+      {
+        "description": "泥土被手轻轻扒开的沙沙声",
+        "location": "前景",
+        "timing": "持续",
+        "volume": "中"
+      },
+      {
+        "description": "众人压抑的、紧张的呼吸声",
+        "location": "背景",
+        "timing": "持续",
+        "volume": "弱"
+      }
+    ],
+    "prompt": "Environment: Bright daytime. Era and Region: Rural China, circa 1990s. Scene: Inside an earthen pit. Subject & Action + Pose + Emotion + Gaze: A tight close-up on several pairs of rough, calloused farmer's hands. The hands are gently but urgently brushing away loose soil from a dark, unseen object. One hand uses a small trowel to carefully scrape away dirt. The movements are precise and cautious. Lighting: Bright sunlight from above, with hands casting shadows on the work area. Camera/DoF: Handheld macro shot, focusing on the hands and the texture of the dirt. Extremely shallow DoF. Mood/Atmosphere: Intense concentration, suspense, archaeological-like discovery.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "手持镜头紧跟挖掘过程，从多个手部清理泥土的特写，慢慢拉开，一块边缘腐朽的黑色木板逐渐露出全貌。",
+    "seed": 19930713,
+    "shot_id": "S021"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "一块巨大、边缘腐朽的黑色木板在坑底逐渐露出全貌，其纹路在阳光下显得十分扭曲。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": "",
+    "isMainScene": 1,
+    "sceneId": "scene02",
+    "text": "一块黑乎乎、边缘腐朽的厚木板露了出来，足有半扇门板大小。",
+    "sfx": [
+      {
+        "description": "极低频的嗡嗡声响起，制造不安感",
+        "location": "全景/环境音",
+        "timing": "入点",
+        "volume": "弱"
+      }
+    ],
+    "prompt": "Environment: Bright daytime. Era and Region: Rural China, circa 1990s. Scene: At the bottom of a freshly dug earthen pit. Subject & Action + Pose + Emotion + Gaze: A large, thick, ancient wooden plank, almost the size of a door, lies partially uncovered in the soil. The wood is a deep, wet-looking black, with heavily decayed and splintered edges. Its surface is covered in unnatural, twisting grain patterns and deep cracks. Lighting: Harsh, direct sunlight strikes the surface of the wood, creating specular highlights on its damp texture and casting deep shadows in its cracks, accentuating its grotesque form. Camera/DoF: Low-angle shot, looking across the surface of the plank. Moderate DoF, keeping the entire visible portion of the plank in focus. Mood/Atmosphere: Ominous reveal, ancient and malevolent object, unsettling.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "手持镜头紧跟挖掘过程，从多个手部清理泥土的特写，慢慢拉开，一块边缘腐朽的黑色木板逐渐露出全貌。",
+    "seed": 19930713,
+    "shot_id": "S021"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "极端特写，镜头缓慢滑过木板表面，展现其扭曲的纹路、深深的裂纹和潮湿的质感。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": "",
+    "isMainScene": 1,
+    "sceneId": "scene02",
+    "text": "那木头质地怪异，沉得吓人，表面布满扭曲的纹路和深深的裂纹，隐隐散发着一股难以形容的、混合了土腥和朽败的怪味。",
+    "sfx": [
+      {
+        "description": "低频嗡嗡声加强，带有轻微的、不和谐的音调",
+        "location": "全景/环境音",
+        "timing": "持续",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: Bright daytime. Scene: The surface of an ancient, black wooden plank. Subject & Action + Pose + Emotion + Gaze: The frame is completely filled with the texture of the wood. The grain is gnarled and twisted, resembling contorted faces or screaming mouths. Deep, dark cracks run across the surface, some filled with damp soil. The wood has a sickly, wet sheen despite the sunlight. Lighting: Bright sunlight rakes across the surface at a low angle, emphasizing every grotesque detail of the texture through highlights and deep shadows. Camera/DoF: Extreme macro shot, using a slider to move slowly and smoothly across the wooden surface. Extremely shallow DoF, with focus pulling along the path of the camera. Mood/Atmosphere: Viscerally unsettling, repulsive, detailed horror, malevolent nature.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "微距镜头，使用滑轨，镜头极其缓慢地从木板的一端滑向另一端，仿佛在用镜头触摸它扭曲的纹理。",
+    "seed": 19930713,
+    "shot_id": "S022"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "一个村民的脸部特写，他瞪大眼睛，嘴巴微张，倒抽一口凉气，满脸惊恐。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": "",
+    "isMainScene": 0,
+    "sceneId": "",
+    "text": "“棺材盖子！”人群里不知谁倒抽一口凉气，声音带着颤。",
+    "sfx": [
+      {
+        "description": "一声响亮的倒抽凉气的声音",
+        "location": "中心, 前景",
+        "timing": "入点",
+        "volume": "强"
+      },
+      {
+        "description": "一个村民惊恐地喊出“棺材盖子！”",
+        "location": "中心",
+        "timing": "入点",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: Bright daytime. Era and Region: Rural China, circa 1990s. Subject & Action + Pose + Emotion + Gaze: A tight close-up on the face of a middle-aged Chinese farmer. His skin is tanned and wrinkled. Emotion: Abject terror (intensity 3): His eyes are wide open, pupils constricted. His mouth is agape as he takes a sharp, audible gasp of air. Sweat beads on his brow. Gaze is fixed down and off-camera, staring at the discovered object. Lighting: Harsh, high-contrast sunlight from the side, carving out the terrified contours of his face. Camera/DoF: Extreme close-up, handheld with a slight tremor, shallow DoF blurring the background completely. Mood/Atmosphere: Raw fear, shocking realization, panic.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "快速剪辑，一个村民惊恐的脸部特写，然后快速切换到其他几个村民同样惊骇的表情。",
+    "seed": 19930713,
+    "shot_id": "S023"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "镜头快速切换到其他村民惊恐的脸上，现场气氛降至冰点。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": "",
+    "isMainScene": 0,
+    "sceneId": "",
+    "text": "这念头一起，现场的气氛瞬间降至冰点。",
+    "sfx": [
+      {
+        "description": "一个尖锐、刺耳的合成音效，作为惊吓点",
+        "location": "全景/环境音",
+        "timing": "入点",
+        "volume": "强"
+      }
+    ],
+    "prompt": "Environment: Bright daytime. Era and Region: Rural China, circa 1990s. Subject & Action + Pose + Emotion + Gaze: A rapid succession of two different farmers' faces. Group Lock: Their expressions mirror the first man's. Emotion: Contagious horror (intensity 3): Wide, unblinking eyes, slack jaws, faces pale with fear under the sun. Gaze is locked on the same off-camera point. Lighting: Harsh, high-contrast sunlight. Camera/DoF: A sequence of two jarring, handheld extreme close-ups. Shallow DoF. Mood/Atmosphere: Spreading panic, shared terror, a moment of collective dread.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "快速剪辑，一个村民惊恐的脸部特写，然后快速切换到其他几个村民同样惊骇的表情。",
+    "seed": 19930713,
+    "shot_id": "S023"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "村长的脸部近景，他眉头紧锁，眼神决绝，最终一咬牙，下达了命令。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": "1",
+    "isMainScene": 0,
+    "sceneId": "",
+    "text": "村长一咬牙：“烧了它！管它是什么鬼东西，一把火烧干净！”",
+    "sfx": [
+      {
+        "description": "村长坚定的命令声，声音洪亮",
+        "location": "中心, 前景",
+        "timing": "持续",
+        "volume": "强"
+      },
+      {
+        "description": "有力的鼓点再次响起，节奏坚定",
+        "location": "全景/环境音",
+        "timing": "入点",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: Bright daytime. Era and Region: Rural China, circa 1990s. Main Character: Use the attached image as the identity reference for the Village Chief; preserve the role's facial features and hairstyle; wearing his Zhongshan suit jacket. Subject & Action + Pose + Emotion + Gaze: A close-up on the Village Chief's face. He visibly clenches his jaw, his lips tightening into a thin line before he opens his mouth to shout an order. Emotion: Hardened resolve overcoming fear (intensity 3): His eyes, initially wide with the shared shock, narrow with fierce determination. His brow is deeply furrowed. Gaze is sharp and directed off-camera. Lighting: Strong sunlight from the side, highlighting the weathered texture of his skin and the grim set of his jaw. Camera/DoF: Close-up shot, 35mm lens, fixed camera, centered composition. Shallow DoF, with the blurred, anxious faces of other villagers behind him. Mood/Atmosphere: Decisive leadership, grim determination, a point of no return.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "近景固定镜头，村长的脸部表情从惊疑转为决绝，他咬紧牙关，然后果断地大声下达命令。",
+    "seed": 19930713,
+    "shot_id": "S024"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "蒙太奇镜头，村民们将一捆捆干燥的烟草杆扔进土坑，动作迅速有力。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": "",
+    "isMainScene": 1,
+    "sceneId": "scene02",
+    "text": "干燥的烟草杆、枯树枝被迅速堆了上去，",
+    "sfx": [
+      {
+        "description": "干燥的烟草杆和树枝被扔下时发出的碰撞声和沙沙声",
+        "location": "全景/环境音",
+        "timing": "持续",
+        "volume": "强"
+      },
+      {
+        "description": "鼓点节奏加快",
+        "location": "全景/环境音",
+        "timing": "持续",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: Bright daytime. Era and Region: Rural China, circa 1990s. Scene: The earthen pit with the black plank at the bottom. Subject & Action + Pose + Emotion + Gaze: A dynamic shot of a pair of hands heaving a large bundle of dry, golden-brown tobacco stalks over the edge and into the pit. The stalks are captured in mid-air, cascading down onto the black wood. The action is fast and forceful. Lighting: Bright sunlight. Camera/DoF: Handheld medium shot, low angle from within the pit, looking up at the action. A fast shutter speed freezes the motion of the falling stalks. Mood/Atmosphere: Urgent, ritualistic, purposeful action.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "快速剪辑的蒙太奇，多个角度展现村民们将干烟草杆和枯树枝扔进土坑的动作，最后一个人拿着火把靠近。",
+    "seed": 19930713,
+    "shot_id": "S025"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "一个燃烧的火把被凑近堆满干柴的木板。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": "",
+    "isMainScene": 1,
+    "sceneId": "scene02",
+    "text": "火把凑近。",
+    "sfx": [
+      {
+        "description": "火把燃烧的“呼呼”声",
+        "location": "前景",
+        "timing": "持续",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: Bright daytime. Era and Region: Rural China, circa 1990s. Scene: The earthen pit, now filled with a large pile of dry tobacco stalks and branches covering the black plank. Subject & Action + Pose + Emotion + Gaze: A close-up shot of a lit torch, its bright orange flame flickering in the daylight, being lowered towards the pile of kindling. The hand holding the torch is visible but not the person. Lighting: The natural sunlight is overpowered in the immediate vicinity by the bright, warm light of the torch flame. Camera/DoF: Handheld close-up, focusing on the flame of the torch and the dry stalks it is about to touch. Shallow DoF. Mood/Atmosphere: Imminent action, suspense, the moment of ignition.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "快速剪辑的蒙太奇，多个角度展现村民们将干烟草杆和枯树枝扔进土坑的动作，最后一个人拿着火把靠近。",
+    "seed": 19930713,
+    "shot_id": "S025"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "低角度仰拍，火把被扔进土坑，“轰”的一声，火焰瞬间腾起，几乎要冲出画面。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": "",
+    "isMainScene": 1,
+    "sceneId": "scene02",
+    "text": "“轰！”火焰腾起，贪婪地舔舐着那块诡异的木板。",
+    "sfx": [
+      {
+        "description": "火焰瞬间点燃的巨大轰鸣声（Whoosh）",
+        "location": "中心",
+        "timing": "入点",
+        "volume": "强"
+      },
+      {
+        "description": "激烈、充满力量感的音乐达到高潮",
+        "location": "全景/环境音",
+        "timing": "持续",
+        "volume": "强"
+      }
+    ],
+    "prompt": "Environment: Bright daytime. Scene: The earthen pit. Subject & Action + Pose + Emotion + Gaze: A massive burst of brilliant orange and yellow flame erupts upwards from the pit, filling the entire frame. The fire is violent and turbulent, with individual tongues of flame clearly visible. The dry tobacco stalks catch fire instantly and explosively. Lighting: The scene is entirely illuminated by the intense, brilliant light of the fire itself. Camera/DoF: Extreme low-angle shot from the bottom of the pit, looking straight up into the inferno. Long-focus lens to compress the flames and make them appear more dense and powerful. Mood/Atmosphere: Violent, powerful, purifying, destructive.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "一个火把被扔进土坑，火焰“轰”地一声冲天而起。镜头聚焦于燃烧的火焰，可以看到木板在高温下开始爆裂。",
+    "seed": 19930713,
+    "shot_id": "S026"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "火焰的特写，被烧的木板表面因高温而“噼啪”爆裂开来，迸出火星。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": "",
+    "isMainScene": 1,
+    "sceneId": "scene02",
+    "text": "火舌跳跃中，那木板发出“噼啪”的爆裂声，声音格外刺耳，仿佛有什么东西在火中痛苦地尖叫。",
+    "sfx": [
+      {
+        "description": "木板被烧时发出的尖锐、刺耳的爆裂声，像尖叫",
+        "location": "中心, 前景",
+        "timing": "持续",
+        "volume": "强"
+      },
+      {
+        "description": "火焰持续的轰鸣声",
+        "location": "全景/环境音",
+        "timing": "持续",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: Bright daytime. Scene: The heart of the fire in the pit. Subject & Action + Pose + Emotion + Gaze: A close-up shot of the black wooden plank being consumed by fire. The surface of the wood is glowing red and orange. A large crack suddenly forms and splinters outwards with a violent burst, sending a shower of sparks into the air. The texture of the charring wood is highly detailed. Lighting: The only light source is the fire itself, creating a dramatic, high-contrast scene of glowing embers and deep black char. Camera/DoF: Telephoto close-up shot, focusing on the detail of the wood's destruction. Shallow DoF. Mood/Atmosphere: Agonizing, violent destruction, supernatural resistance.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "一个火把被扔进土坑，火焰“轰”地一声冲天而起。镜头聚焦于燃烧的火焰，可以看到木板在高温下开始爆裂。",
+    "seed": 19930713,
+    "shot_id": "S026"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "火焰颜色特写，在橘红色的主色调中，透出几缕诡异的青蓝色火苗，在慢动作下舞动。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": "",
+    "isMainScene": 1,
+    "sceneId": "scene02",
+    "text": "更奇的是，火焰的颜色似乎也透着一种不祥的青蓝，",
+    "sfx": [
+      {
+        "description": "持续的燃烧声，但音调变得有些诡异",
+        "location": "全景/环境音",
+        "timing": "持续",
+        "volume": "中"
+      },
+      {
+        "description": "诡异、不祥的音乐进入，带有人声咏唱元素",
+        "location": "全景/环境音",
+        "timing": "入点",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: Daytime. Scene: A raging fire. Subject & Action + Pose + Emotion + Gaze: An abstract close-up of the fire. The flames are predominantly a fiery orange, but unnatural, ghostly tendrils of turquoise and cobalt blue flame lick and dance within the inferno. The motion is captured in slow-motion, making the movement of the flames seem deliberate and serpentine. Lighting: The flames are the source of light, creating a mesmerizing and colorful display. Camera/DoF: Macro shot, slow motion (120fps), focusing on the strange coloration of the fire. Very shallow DoF. Mood/Atmosphere: Unnatural, supernatural, eerie, hypnotic, and ominous.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "慢动作特写，展现火焰中诡异的青蓝色，随后镜头向上摇，拍摄到滚滚浓烟在土坑上方盘旋，形成一个小型漩涡，久久不散。",
+    "seed": 19930713,
+    "shot_id": "S027"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "滚滚的浓烟没有向上飘散，而是在土坑上方诡异地打着旋，形成一个小型漩涡，久久不散。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": "",
+    "isMainScene": 1,
+    "sceneId": "scene02",
+    "text": "滚滚浓烟不是笔直向上，而是诡异地打着旋儿，久久盘踞在那片挖开的土坑上方，",
+    "sfx": [
+      {
+        "description": "风声，但听起来像是围绕着一个中心旋转",
+        "location": "全景/环境音",
+        "timing": "持续",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: Bright daytime, blue sky. Scene: Above the earthen pit. Subject & Action + Pose + Emotion + Gaze: A thick, oily column of black and grey smoke rises from the unseen fire below. Instead of dissipating or rising straight up, the smoke coils and twists in on itself, forming a stable, slowly rotating vortex against the clear blue sky. The motion is unnatural and mesmerizing. Lighting: The dark smoke is strongly backlit by the bright sun, creating a dramatic silhouette with highlighted edges. Camera/DoF: Low-angle shot, looking up at the sky. Slow motion. Deep DoF to keep the entire smoke formation in focus. Mood/Atmosphere: Ominous, supernatural, a lingering curse, defying nature.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "慢动作特写，展现火焰中诡异的青蓝色，随后镜头向上摇，拍摄到滚滚浓烟在土坑上方盘旋，形成一个小型漩涡，久久不散。",
+    "seed": 19930713,
+    "shot_id": "S027"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "中景镜头缓慢推近，村民们的脸上被火光照亮，混合着恐惧、敬畏和解脱，所有人都死死盯着火焰。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": "",
+    "isMainScene": 0,
+    "sceneId": "",
+    "text": "所有人都屏息凝神，死死盯着那团燃烧的火焰和扭曲的浓烟，直到最后一块焦炭化为灰烬，与泥土混作一处。",
+    "sfx": [
+      {
+        "description": "火焰燃烧声逐渐减弱",
+        "location": "背景",
+        "timing": "持续",
+        "volume": "中"
+      },
+      {
+        "description": "诡异的音乐逐渐减弱，趋于平静",
+        "location": "全景/环境音",
+        "timing": "持续",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: Daytime, but the primary light is from a fire. Era and Region: Rural China, circa 1990s. Scene: The edge of the pit. Subject & Action + Pose + Emotion + Gaze: Group Lock: A line of villagers, including the Village Chief, stand watching the fire. They are motionless, transfixed. Emotion: A complex mix of awe, fear, and relief (intensity 2): Their faces are illuminated by the flickering firelight, revealing wide eyes, tense jawlines, and a shared, profound experience. Gaze is locked onto the off-camera fire. Lighting: The key light is the strong, warm, flickering light from the fire, casting dancing shadows on their faces and creating a chiaroscuro effect. The ambient daylight acts as a cool fill light. Camera/DoF: Medium shot, camera on a dolly, pushing in slowly across the line of faces. Moderate DoF. Mood/Atmosphere: Mesmerized, ritualistic, communal catharsis, watching a vanquished evil.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "中景，镜头缓慢地从左到右扫过村民们的脸，他们每个人的脸上都被火光映照，表情混合着恐惧与敬畏，目光都死死地盯着坑中的火焰。",
+    "seed": 19930713,
+    "shot_id": "S028"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "夜晚，月光明亮，同一个南头小路，一个村民哼着小曲，轻松愉快地走了过去，道路清晰，再无阻碍。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 0,
+    "charactId": "",
+    "isMainScene": 0,
+    "sceneId": "",
+    "text": "自那天起，李家坳南头的“挡”，真的消失了。夜归的人，即使忘带电棒，也能安然通过。",
+    "sfx": [
+      {
+        "description": "宁静的夏夜虫鸣声",
+        "location": "全景/环境音",
+        "timing": "持续",
+        "volume": "中"
+      },
+      {
+        "description": "一个村民轻松的脚步声和随意的哼唱声",
+        "location": "中心",
+        "timing": "持续",
+        "volume": "弱"
+      },
+      {
+        "description": "平静、舒缓的音乐",
+        "location": "全景/环境音",
+        "timing": "入点",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: Clear night, bright full moon. Era and Region: Rural China, circa 1990s. Scene: The same narrow dirt path from the beginning of the story, but now it looks completely normal and peaceful. Subject & Action + Pose + Emotion + Gaze: A lone, unidentified villager is seen walking casually and confidently down the path. His posture is relaxed. He is a silhouette against the moonlit background. Lighting: The scene is bathed in the cool, silvery light of a bright full moon, which casts soft, long shadows. The path is clearly visible. Camera/DoF: Static long shot, symmetrical composition, with the path leading from the foreground into the distance. Deep DoF. Mood/Atmosphere: Peaceful, serene, safe, resolution, a stark contrast to the earlier terror.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "远景固定机位，月光下，一个村民的身影轻松地从远处走来，穿过之前鬼打墙的小路，安然无恙地离去。",
+    "seed": 19930714,
+    "shot_id": "S029"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "白天，一个鼻子很灵的老人路过被烧过的土地，他突然停下脚步，似乎闻到了什么。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": "2",
+    "isMainScene": 0,
+    "sceneId": "",
+    "text": "只是，偶尔有鼻子特别灵的老人路过那块烧过木板的地方，",
+    "sfx": [
+      {
+        "description": "轻微的风声和远处田地的声音",
+        "location": "全景/环境音",
+        "timing": "持续",
+        "volume": "弱"
+      }
+    ],
+    "prompt": "Environment: Bright, sunny daytime. Era and Region: Rural China, circa 1990s. Scene: The patch of earth where the burning took place. The soil is slightly darker and disturbed. Main Character: Use the attached image as the identity reference for the wise old man; preserve the role's facial features and hairstyle; wearing a traditional dark blue tunic and holding a long-stemmed pipe. Subject & Action + Pose + Emotion + Gaze: The old man is captured mid-stride, having just come to a halt. His body is turned slightly, and his head is cocked as if listening or sensing something. Emotion: Puzzled curiosity (intensity 1): His brow is slightly furrowed. Gaze is unfocused, directed towards the air around him. Lighting: Bright, natural sunlight. Camera/DoF: Medium shot, following the old man's movement. Moderate DoF. Mood/Atmosphere: Calm, mundane, with a hint of underlying mystery.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "镜头跟随一位老人路过被烧过的土地，他突然停下脚步，皱起眉头，凑近鼻子在空气中仔细地嗅了嗅，脸上露出困惑的表情。",
+    "seed": 19930714,
+    "shot_id": "S030"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "老人的面部近景，他皱着眉在空气中嗅了嗅，表情困惑，似乎在浓郁的烟草香里闻到了别的味道。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": "2",
+    "isMainScene": 0,
+    "sceneId": "",
+    "text": "在浓郁的烟草香里，会皱着眉嘀咕一句：“嗯？好像……还有点别的啥味儿？”",
+    "sfx": [
+      {
+        "description": "老人困惑的、轻声的嘀咕",
+        "location": "中心, 前景",
+        "timing": "入点",
+        "volume": "弱"
+      },
+      {
+        "description": "一丝悬疑的音符悄然响起，然后消失",
+        "location": "全景/环境音",
+        "timing": "出点",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Environment: Bright, sunny daytime. Era and Region: Rural China, circa 1990s. Main Character: Use the attached image as the identity reference for the wise old man; preserve the role's facial features and hairstyle. Subject & Action + Pose + Emotion + Gaze: A close-up on the old man's face. He slightly raises his head and takes a deliberate sniff of the air, his nostrils flaring slightly. Emotion: Deeply puzzled (intensity 2): His brow is heavily wrinkled in concentration, and his deep-set eyes are narrowed, not in suspicion, but in genuine confusion. His lips are pursed. Gaze is unfocused, looking inward as he tries to place the strange smell. Lighting: Bright sunlight highlights the deep wrinkles and textures of his face. Camera/DoF: Tight close-up shot, focusing on his weathered face and confused expression. Shallow DoF. Mood/Atmosphere: Lingering mystery, unresolved questions, an unsettling final note.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "镜头跟随一位老人路过被烧过的土地，他突然停下脚步，皱起眉头，凑近鼻子在空气中仔细地嗅了嗅，脸上露出困惑的表情。",
+    "seed": 19930714,
+    "shot_id": "S030"
+  },
+  {
+    "frame_idx": 1,
+    "frame": "S031号镜头的第1帧。黄昏，村口老树下，一位讲述传说的老人刚点燃烟袋，烟雾升起，他正要开口对围坐的孩子们讲述故事。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": "2",
+    "isMainScene": 0,
+    "sceneId": "",
+    "text": "而那把火，和火中那块神秘的木板，连同“挡”的传说，",
+    "sfx": [
+      {
+        "description": "长杆旱烟被点燃后，吸吮时发出的滋滋声",
+        "location": "中心, 前景",
+        "timing": "入点",
+        "volume": "中"
+      },
+      {
+        "description": "老人低沉模糊的讲述声开始",
+        "location": "中心, 前景",
+        "timing": "持续",
+        "volume": "弱"
+      },
+      {
+        "description": "傍晚的乡村环境音，微风，远处的犬吠",
+        "location": "全景/环境音",
+        "timing": "持续",
+        "volume": "弱"
+      }
+    ],
+    "prompt": "Golden hour at dusk, warm soft light. 1990s rural China, under a large, ancient village tree. A 75-year-old wise old man (identity reference: charactId 2, wearing a patched dark blue tunic) is sitting on a low wooden stool. He holds a long-stemmed Chinese tobacco pipe to his lips, a thin wisp of smoke curling upwards from it. His expression is mysterious and thoughtful (intensity 2), his hazy eyes directed towards a group of children just out of frame, as if beginning a profound story. Group Lock: 5-6 young children in simple rural clothing are sitting on the ground, their faces turned towards him with rapt attention, partially visible. Lighting is warm, low-angle sunlight from the setting sun, backlighting the smoke. Medium shot with a long focal length (~85mm), eye-level, moderate depth of field. The atmosphere is nostalgic, warm, and mysterious. Photorealistic, cinematic, retro film tones.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "黄昏时分，村口老树下，一位满脸皱纹的老人（角色ID 2）坐在小凳上，点燃长杆旱烟，吸了一口，缓缓吐出烟雾，开始对围坐的孩童讲述故事。",
+    "seed": 19930714,
+    "shot_id": "S031"
+  },
+  {
+    "frame_idx": 2,
+    "frame": "S031号镜头的第2帧。镜头推近，特写讲述传说的老人，他表情神秘，手部略有动作，孩子们完全被故事吸引。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": "2",
+    "isMainScene": 0,
+    "sceneId": "",
+    "text": "就成了村里老人烟袋锅子明灭间，最神秘、也最悚然的话题，一代代传了下来，",
+    "sfx": [
+      {
+        "description": "老人烟袋锅里烟丝燃烧的轻微噼啪声",
+        "location": "中心, 前景",
+        "timing": "持续",
+        "volume": "弱"
+      },
+      {
+        "description": "老人讲述声，音调略有起伏，带有悬疑感（模糊处理）",
+        "location": "中心, 前景",
+        "timing": "持续",
+        "volume": "中"
+      },
+      {
+        "description": "傍晚虫鸣声渐起",
+        "location": "全景/环境音",
+        "timing": "持续",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Deepening dusk with an intense orange glow. 1990s rural China. A medium close-up on the face of a 75-year-old wise old man (identity reference: charactId 2, wearing a dark blue tunic). He leans forward, his wrinkled hand gesturing subtly. His expression is captivating and secretive (intensity 3), his deep-set eyes holding ancient secrets as he tells a story. The ember in his tobacco pipe bowl glows brightly. His gaze is fixed on an unseen audience. The face of a mesmerized child is visible in the soft-focused foreground. Rembrandt lighting from the setting sun creates deep shadows, accentuating his wrinkles. Tight shot with a long lens (~100mm), very shallow depth of field. The atmosphere is intimate, suspenseful, and enchanting. Photorealistic, cinematic, retro film tones.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "镜头缓缓推近，聚焦在老人（角色ID 2）讲述故事时神秘而生动的面部表情上，他的手随着讲述内容比划着，孩子们个个听得入了迷，眼神专注。",
+    "seed": 19930714,
+    "shot_id": "S031"
+  },
+  {
+    "frame_idx": 3,
+    "frame": "S031号镜头的第3帧。中景，夕阳的最后一缕光线中，老人和孩子们形成一个剪影般的画面，烟雾在空中弥漫，故事仿佛也融入了这片土地的记忆。",
+    "style": "写实电影感, 8K画质, 复古胶片色调",
+    "isMaincharacter": 1,
+    "charactId": "2",
+    "isMainScene": 0,
+    "sceneId": "",
+    "text": "像一缕始终未能散尽的焦糊气，顽固地缠绕在关于烟草香的童年记忆里。",
+    "sfx": [
+      {
+        "description": "最后一声悠长的烟袋锅吸吮声",
+        "location": "中心",
+        "timing": "入点",
+        "volume": "中"
+      },
+      {
+        "description": "风吹过树叶的沙沙声",
+        "location": "全景/环境音",
+        "timing": "持续",
+        "volume": "中"
+      },
+      {
+        "description": "怀旧、神秘的主题音乐音量渐强",
+        "location": "全景/环境音",
+        "timing": "持续",
+        "volume": "中"
+      }
+    ],
+    "prompt": "Last light of sunset, the sky is deep orange and purple. 1990s rural China village entrance. The large, ancient tree is a dominant silhouette. A group of old men and children are gathered beneath it, their forms mostly silhouetted against the setting sun. The main storyteller (identity reference: charactId 2) leans back, taking a final puff from his pipe, his posture relaxed and melancholic (intensity 1). Thick, hazy tobacco smoke hangs in the still air, beautifully illuminated by the strong backlight. The entire scene has a legendary and nostalgic quality. Medium-wide shot with a long lens (~85mm) compressing the space, fixed position, deep depth of field. The atmosphere is poetic, melancholic, and timeless. Photorealistic, cinematic, retro film tones.",
+    "nprompt": "blurry, low quality, worst quality, bad hands, bad anatomy, cropped, jpeg artifacts, signature, watermark, username, text, ugly, deformed, noisy, mutilated, mangled, extra limbs, poorly drawn face",
+    "promptv": "镜头稍微拉远，展现整个场景，老人（角色ID 2）和孩子们被夕阳的余晖笼罩，烟雾在温暖的光线中缭绕，画面充满怀旧感。",
+    "seed": 19930714,
+    "shot_id": "S031"
+  }
+]

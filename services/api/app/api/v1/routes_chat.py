@@ -1,11 +1,15 @@
+from typing import Any, Dict, List
+
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, Field
-from typing import List, Dict, Any
+
 from providers.llm.gemini import GeminiClient
 from services.api.app.core.security import verify_api_key
 
 router = APIRouter()
 _client = None
+
+
 def get_client():
     global _client
     if _client is None:
@@ -20,13 +24,16 @@ def get_client():
         )
     return _client
 
+
 class ChatMessage(BaseModel):
     role: str = Field(..., description="'user' | 'model'")
     parts: List[Any]
 
+
 class ChatReq(BaseModel):
     messages: List[ChatMessage]
     config: Dict[str, Any] = {}
+
 
 @router.post("/chat", dependencies=[Depends(verify_api_key)])
 def chat(req: ChatReq):

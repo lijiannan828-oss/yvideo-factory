@@ -1,6 +1,7 @@
 from fastapi import APIRouter
-from .routes_generate import router as _gen
+
 from .routes_chat import router as _chat
+from .routes_generate import router as _gen
 from .routes_json import router as _json
 from .routes_stream import router as _stream
 

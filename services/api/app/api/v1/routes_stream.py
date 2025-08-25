@@ -1,14 +1,18 @@
-from fastapi import APIRouter, Depends, HTTPException
+import json
+from typing import Any, Dict
+
+from fastapi import APIRouter, Depends
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
-from typing import Any, Dict
+
 from providers.llm.gemini import GeminiClient
 from services.api.app.core.security import verify_api_key
 from services.api.app.core.sse import sse_iter
-import json
 
 router = APIRouter()
 _client = None
+
+
 def get_client():
     global _client
     if _client is None:
@@ -23,9 +27,11 @@ def get_client():
         )
     return _client
 
+
 class StreamReq(BaseModel):
     prompt: Any
     config: Dict[str, Any] = {}
+
 
 @router.post("/stream", dependencies=[Depends(verify_api_key)])
 def stream(req: StreamReq):

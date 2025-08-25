@@ -1,0 +1,20 @@
+{
+  "id": "572a6d95ef8248b0bd7de7c0bde9c787",
+  "created_at": "2025-08-25T13:06:29Z",
+  "round1": {
+    "used_model": "models/gemini-2.5-pro",
+    "failures": [],
+    "shots": 31
+  },
+  "round2": {
+    "used_model": "models/gemini-2.5-pro",
+    "failures": [],
+    "frames": 60
+  },
+  "downloads": {
+    "pictures_url": "/data/storyboard/20250825/572a6d95ef8248b0bd7de7c0bde9c787_round1_pictures.json",
+    "keyframes_url": "/data/storyboard/20250825/572a6d95ef8248b0bd7de7c0bde9c787_round2_keyframes.json",
+    "round1_raw_url": "/data/storyboard/20250825/572a6d95ef8248b0bd7de7c0bde9c787_round1_raw.txt",
+    "round2_raw_url": "/data/storyboard/20250825/572a6d95ef8248b0bd7de7c0bde9c787_round2_raw.txt"
+  }
+}

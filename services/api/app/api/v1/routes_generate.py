@@ -1,11 +1,15 @@
+from typing import Any, Dict
+
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
-from typing import Any, Dict
+
 from providers.llm.gemini import GeminiClient
 from services.api.app.core.security import verify_api_key
 
 router = APIRouter()
 _client = None
+
+
 def get_client():
     global _client
     if _client is None:
@@ -20,9 +24,11 @@ def get_client():
         )
     return _client
 
+
 class GenerateReq(BaseModel):
     prompt: Any
     config: Dict[str, Any] = {}
+
 
 @router.post("/generate", dependencies=[Depends(verify_api_key)])
 def generate(req: GenerateReq):
