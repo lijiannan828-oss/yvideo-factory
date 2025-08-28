@@ -1,0 +1,7 @@
+cat >> .gitignore <<'EOF'
+dev_outputs/
+round1.json
+round2.json
+full.json
+.DS_Store
+EOF

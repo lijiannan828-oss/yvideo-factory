@@ -1,5 +1,7 @@
 # providers/llm/gemini.py (patch6b) — full backward-compat layer + model_candidates property
-import os, json, time
+import os
+import json
+import time
 from typing import Iterable, Any, Dict, Optional, List, Tuple
 from dotenv import load_dotenv
 load_dotenv()
@@ -30,13 +32,17 @@ def _to_text(prompt: Any) -> str:
     return str(prompt)
 
 def _as_response_schema(json_schema: Optional[Dict]) -> Optional[Any]:
-    if not json_schema: return None
+    """Return google-genai schema object if available; otherwise return the raw dict."""
+    if not json_schema:
+        return None
     try:
+        # `types` 由 google-genai 导入，你的其余代码里已存在；这里保持兼容
         if hasattr(types, "Schema") and hasattr(types.Schema, "from_json"):
-            return types.Schema.from_json(json_schema)  # 兼容 0.2.x
+            return types.Schema.from_json(json_schema)
     except Exception:
-        pass
-    return json_schema  # 兼容 0.3.x
+        # 回退：直接返回原始 schema
+        return json_schema
+    return json_schema
 
 def _sleep_backoff(i: int): time.sleep(min(1.5 * (2 ** i), 6.0))
 

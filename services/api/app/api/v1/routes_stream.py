@@ -10,6 +10,7 @@ from services.api.app.core.security import verify_api_key
 from services.api.app.core.sse import sse_iter
 
 router = APIRouter()
+
 _client = None
 
 

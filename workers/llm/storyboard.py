@@ -128,7 +128,8 @@ def _parse_json_list_strict(s: str) -> Optional[List[Any]]:
     except Exception:
         pass
     try:
-        li = s1.index("["); ri = s1.rfind("]")
+        li = s1.index("[")
+        ri = s1.rfind("]")
         if ri > li:
             obj = json.loads(s1[li:ri+1])
             return obj if isinstance(obj, list) else None
@@ -445,9 +446,12 @@ def generate_keyframe_prompts_batched(
             )
             if um and not used_model_holder["value"]:
                 used_model_holder["value"] = um
-            all_keyframes.extend(parsed); all_raw_chunks.append(raw)
-            if fs: failures.extend([f"batch#{bi+1}: {x}" for x in fs])
-            if not parsed: failed.append(bi)
+            all_keyframes.extend(parsed)
+            all_raw_chunks.append(raw)
+            if fs: 
+                failures.extend([f"batch#{bi+1}: {x}" for x in fs])
+            if not parsed: 
+                failed.append(bi)
         _sort_all()
         return failed
 
@@ -491,7 +495,8 @@ def generate_keyframe_prompts_batched(
             continue_segments=continue_segments,
             prefer_stream=False, on_stream=None
         )
-        all_keyframes.extend(parsed); all_raw_chunks.append(raw or "")
+        all_keyframes.extend(parsed);
+        all_raw_chunks.append(raw or "")
         if fs:
             failures.extend([f"retry#{retry_round}: {x}" for x in fs])
         _sort_all()
