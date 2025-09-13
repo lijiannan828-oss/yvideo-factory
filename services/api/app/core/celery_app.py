@@ -22,7 +22,7 @@ def find_task_modules(base_path="workers"):
     :return: 一个包含所有任务模块导入路径的列表。
     """
     # 获取项目根目录的绝对路径
-    root_dir = Path(__file__).parent.parent.parent.parent
+    root_dir =  Path(os.getcwd())
     tasks_dir = root_dir / base_path
     
     module_paths = []
