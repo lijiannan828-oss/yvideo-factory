@@ -5,3 +5,10 @@ round2.json
 full.json
 .DS_Store
 EOF
+gcp/
+*.env
+*.json
+params.env
+.env
+.idea/
+.venv/

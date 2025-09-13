@@ -1,7 +1,62 @@
-fastapi==0.111.0
-uvicorn[standard]==0.30.3
-pydantic==2.7.1
-python-dotenv==1.0.1
+# =========================
+# Core API (FastAPI stack)
+# =========================
+fastapi~=0.114
+uvicorn[standard]~=0.30
+gunicorn~=21.2
+orjson~=3.10
+python-multipart~=0.0.9
+aiofiles~=24.1
+
+# =========================
+# Settings & Config
+# =========================
+pydantic~=2.8
+pydantic-settings~=2.4
+python-dotenv~=1.0
+
+# =========================
+# Database (PostgreSQL)
+# =========================
+SQLAlchemy~=2.0
+alembic~=1.13
+psycopg2-binary~=2.9
+
+# =========================
+# Task Queue (Celery + Redis)
+# =========================
+celery~=5.3
+redis~=5.0
+flower~=2.0     # 可选：任务监控UI
+
+# =========================
+# HTTP Clients & Utils
+# =========================
+httpx[http2]~=0.27
+requests~=2.32
+tenacity~=8.3    # 重试装饰器/策略
+
+# =========================
+# Workflow / Templates / YAML
+# =========================
+PyYAML~=6.0
+Jinja2~=3.1
+
+# =========================
+# Cloud & Observability
+# =========================
+google-cloud-storage~=2.17   # 如用 GCS 存储
+prometheus-client~=0.20      # 指标上报
+
 google-genai==0.3.0
-httpx==0.27.0
-requests==2.32.3
+
+# =========================
+# Media (optional for MVP)
+# =========================
+ffmpeg-python~=0.2           # 需系统安装 ffmpeg 可执行文件
+pydub~=0.25                  # 简单音频处理
+
+# =========================
+# Logging
+# =========================
+loguru~=0.7
