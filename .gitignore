@@ -9,3 +9,6 @@ gcp/
 *.env
 *.json
 params.env
+.env
+.idea/
+.venv/
