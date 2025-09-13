@@ -9,13 +9,13 @@ EXEC_API     := docker compose -f $(COMPOSE_FILE) exec api sh -lc
 
 # 镜像仓库（GHCR / Docker Hub 均可）
 REGISTRY ?= ghcr.io
-OWNER    ?= <你的GitHub用户名或组织>   # 例如: lijiannan828-oss
+OWNER    ?= lijiannan828-oss  # 例如: lijiannan828-oss
 APP      ?= yvideo-factory
 TAG      ?= $(shell git rev-parse --short HEAD)
 IMAGE    ?= $(REGISTRY)/$(OWNER)/$(APP):$(TAG)
 
 # 远程服务器（镜像拉取部署）
-DEPLOY_HOST ?= ubuntu@your.server.com
+DEPLOY_HOST ?= ubuntu@www.luxivideo.com
 DEPLOY_DIR  ?= /opt/yvideo-factory
 
 # =========================
