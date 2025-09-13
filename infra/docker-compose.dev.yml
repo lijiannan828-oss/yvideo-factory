@@ -60,10 +60,16 @@ services:
 
   flower:
     image: mher/flower
-    command: --broker=${CELERY_BROKER_URL}
+    # 关键修正: 将 command 指令修改为列表格式 (exec form)
+    command: 
+      - "celery"
+      - "--broker=${CELERY_BROKER_URL}"
+      - "flower"
     ports:
       - "5555:5555"
     env_file:
       - ../.env
     depends_on:
       - redis
+      - worker
+    restart: unless-stopped
