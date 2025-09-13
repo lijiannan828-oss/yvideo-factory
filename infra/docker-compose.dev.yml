@@ -1,91 +1,69 @@
-
+# infra/docker-compose.dev.yml (最终修正版 V4)
 services:
-  # ============== Cloud SQL Proxy sidecar（本地容器 → Cloud SQL 实例） ==============
   cloudsql:
-    image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.11.3
-    # 5432 是容器内部监听端口；应用容器通过 "cloudsql:5432" 访问数据库
+    image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.8.0
     command:
+     # 关键修正 1: 增加 --address 0.0.0.0 参数，确保代理在所有网络接口上监听
+      - "--address=0.0.0.0"
       - "--port=5432"
-      - "${CLOUD_SQL_CONN_NAME}"       # 形如 PROJECT:REGION:INSTANCE（写在 ../.env）
-    environment:
-      - GOOGLE_APPLICATION_CREDENTIALS=/config/sa.json
+      - "${CLOUD_SQL_CONN_NAME}"
+    # 关键修正 1: 将本地的密钥文件直接挂载到容器内的一个特定路径，例如 /secrets/sa.json
     volumes:
-      - ../gcp/dev-sa.json:/config/sa.json:ro
-    restart: unless-stopped
+      - ../.gcp/dev-sa-key.json:/secrets/sa.json:ro
+    environment:
+      # 关键修正 2: GOOGLE_APPLICATION_CREDENTIALS 必须精确指向挂载后的文件路径
+      - "GOOGLE_APPLICATION_CREDENTIALS=/secrets/sa.json"
+    env_file:
+      - ../.env
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 5432"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
 
-  # ================================== API ==================================
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
+
   api:
     build:
       context: ..
       dockerfile: Dockerfile.api
-    # 如果你的 Dockerfile 没有在 dev 模式启用热重载，可解注下一行以强制 uvicorn --reload
-    # command: uvicorn services.api.app.main:app --host 0.0.0.0 --port 8000 --reload
-    env_file:
-      - ../.env
     ports:
       - "8000:8000"
+    env_file:
+      - ../.env
     depends_on:
       - cloudsql
       - redis
     volumes:
-      # 代码热更新（保持你的路径）
-      - ../services/api/app:/app/services/api/app
-      # dev 输出目录
-      - ../dev_outputs:/app/services/api/app/data
-      # Prompt / 规则热更新（保持你的路径）
-      - ../prompts:/app/prompts
-      - ../rules:/app/rules
-      # GCS 本地开发凭据（只读）
-      - ../gcp/dev-sa.json:/app/.gcp/dev-sa.json:ro
-    # 如果你本机还会开 SSH 隧道给 Redis/其他服务，用这个别名能从容器连宿主机
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
-    restart: unless-stopped
+      - ../.gcp:/app/.gcp:ro
 
-  # =============================== Celery Worker ===============================
   worker:
     build:
       context: ..
       dockerfile: Dockerfile.worker
-    # 根据你的项目入口调整；以下示例命令请与你的 celery 实例路径一致
-    # 例：app.core.celery_app.celery_app 是你的 Celery 实例
-    command: bash -lc "celery -A services.api.app.core.celery_app:celery_app worker --loglevel=INFO"
+    command: /opt/venv/bin/celery -A services.api.app.core.celery_app:celery_app worker -l info
     env_file:
       - ../.env
     depends_on:
       - cloudsql
       - redis
     volumes:
-      # 与 API 保持一致的热更新挂载（Worker 也可读取 prompts/rules 等）
-      - ../services/api/app:/app/services/api/app
-      - ../dev_outputs:/app/services/api/app/data
-      - ../prompts:/app/prompts
-      - ../rules:/app/rules
-      - ../gcp/dev-sa.json:/app/.gcp/dev-sa.json:ro
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
-    restart: unless-stopped
+      - ../.gcp:/app/.gcp:ro
 
-  # =============================== Flower（可选） ===============================
   flower:
-    image: mher/flower:0.9.7
+    build:
+      context: ..
+      dockerfile: Dockerfile.worker
+    command: ["celery", "-A", "services.api.app.core.celery_app:celery_app", "flower", "--broker=${CELERY_BROKER_URL}", "--port=5555"]
     env_file:
       - ../.env
-    command: >
-      flower
-      --broker=${CELERY_BROKER_URL}
-      --port=5555
-    ports:
-      - "5555:5555"
     depends_on:
       - worker
-    restart: unless-stopped
-
-  # =============================== Redis（本地开发） ===============================
-  redis:
-    image: redis:7-alpine
     ports:
-      - "6379:6379"
-    restart: unless-stopped
-
-
+      - "5555:5555"
+    working_dir: /app
+    volumes:
+      - ..:/app
