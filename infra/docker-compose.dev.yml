@@ -55,12 +55,12 @@ services:
 
   flower:
     image: mher/flower
-    # 关键修正 3: 使用正确的列表格式 (exec form) 来定义命令和参数
-    command: ["flower","--broker=${CELERY_BROKER_URL}","--port=5555"]
-    ports:
-      - "5555:5555"
+    command: ["celery", "-A", "services.api.app.core.celery_app:celery_app", "flower", "--broker=${CELERY_BROKER_URL}", "--port=5555"]
     env_file:
       - ../.env
     depends_on:
-      - redis
       - worker
+    ports:
+      - "5555:5555"
+    volumes:
+      - ../services/api/app:/app/services/api/app
