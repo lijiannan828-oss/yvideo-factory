@@ -3,7 +3,7 @@ SHELL := /bin/bash
 # =========================
 # 基础配置（按需修改）
 # =========================
-COMPOSE_FILE ?= infra/docker-compose.yml
+COMPOSE_FILE ?= infra/docker-compose.dev.yml
 RUN          := docker compose -f $(COMPOSE_FILE)
 EXEC_API     := docker compose -f $(COMPOSE_FILE) exec api sh -lc
 
@@ -49,6 +49,9 @@ help:
 .PHONY: up down logs ps restart rebuild shell
 up:
 	$(RUN) up -d --build
+
+up-dev:
+	docker compose --env-file .env -f infra/docker-compose.dev.yml up -d --build
 
 down:
 	$(RUN) down
