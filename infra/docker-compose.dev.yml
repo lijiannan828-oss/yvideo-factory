@@ -3,6 +3,8 @@ services:
   cloudsql:
     image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.8.0
     command:
+     # 关键修正 1: 增加 --address 0.0.0.0 参数，确保代理在所有网络接口上监听
+      - "--address=0.0.0.0"
       - "--port=5432"
       - "${CLOUD_SQL_CONN_NAME}"
     # 关键修正 1: 将本地的密钥文件直接挂载到容器内的一个特定路径，例如 /secrets/sa.json
@@ -33,10 +35,8 @@ services:
     env_file:
       - ../.env
     depends_on:
-      cloudsql:
-        condition: service_healthy
-      redis:
-        condition: service_started
+      - cloudsql
+      - redis
     volumes:
       - ../.gcp:/app/.gcp:ro
 
@@ -48,25 +48,19 @@ services:
     env_file:
       - ../.env
     depends_on:
-      cloudsql:
-        condition: service_healthy
-      redis:
-        condition: service_started
+      - cloudsql
+      - redis
     volumes:
       - ../.gcp:/app/.gcp:ro
 
   flower:
     image: mher/flower
     # 关键修正 3: 使用正确的列表格式 (exec form) 来定义命令和参数
-    command: 
-      - "celery"
-      - "-A"
-      - "services.api.app.core.celery_app:celery_app"
-      - "flower"
-      - "--broker=${CELERY_BROKER_URL}"
+    command: ["flower","--broker=${CELERY_BROKER_URL}","--port=5555"]
     ports:
       - "5555:5555"
     env_file:
       - ../.env
     depends_on:
       - redis
+      - worker
