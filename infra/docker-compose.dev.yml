@@ -54,7 +54,9 @@ services:
       - ../.gcp:/app/.gcp:ro
 
   flower:
-    image: mher/flower
+    build:
+      context: ..
+      dockerfile: Dockerfile.worker
     command: ["celery", "-A", "services.api.app.core.celery_app:celery_app", "flower", "--broker=${CELERY_BROKER_URL}", "--port=5555"]
     env_file:
       - ../.env
@@ -62,5 +64,6 @@ services:
       - worker
     ports:
       - "5555:5555"
+    working_dir: /app
     volumes:
-      - ../services/api/app:/app/services/api/app
+      - ..:/app
