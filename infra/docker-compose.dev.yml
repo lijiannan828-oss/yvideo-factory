@@ -1,16 +1,23 @@
-# infra/docker-compose.dev.yml (最终修正版)
+# infra/docker-compose.dev.yml (最终修正版 V2)
 services:
   cloudsql:
     image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.13.0
     command:
       - "--port=5432"
+      - "--address=0.0.0.0"
       - "${CLOUD_SQL_CONN_NAME}"
     volumes:
-      - ../.gcp/dev-sa-key.json:/config/sa.json:ro
+      - ../.gcp/dev-sa-key.json:/config:ro
     environment:
-      - "GOOGLE_APPLICATION_CREDENTIALS=/config/sa.json"
+      - "GOOGLE_APPLICATION_CREDENTIALS=/config"
     env_file:
-      - ../.env # 确保代理也能读取到变量
+      - ../.env
+    # 关键修正 1: 增加健康检查，确保代理完全可用
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 5432"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
 
   redis:
     image: "redis:alpine"
@@ -26,28 +33,33 @@ services:
     env_file:
       - ../.env
     depends_on:
-      - cloudsql
-      - redis
+      # 关键修正 2: 让API服务等待cloudsql健康后再启动
+      cloudsql:
+        condition: service_healthy
+      redis:
+        condition: service_started
     volumes:
-      - ../.gcp/dev-sa-key.json:/app/.gcp/dev-sa.json:ro
+      - ../.gcp:/app/.gcp:ro
 
   worker:
     build:
       context: ..
       dockerfile: Dockerfile.worker
-    # 关键修正：明确指定启动命令，使用虚拟环境中的celery
-    command: /opt/venv/bin/celery -A services.api.app.core.celery_app:celery_app worker -l info -Q default,cpu_queue,analysis_queue,api_queue,gpu_queue
+    command: /opt/venv/bin/celery -A services.api.app.core.celery_app:celery_app worker -l info
+    user: "1000:1000" # 避免权限问题
     env_file:
       - ../.env
     depends_on:
-      - cloudsql
-      - redis
+      # 关键修正 3: 让Worker服务也等待cloudsql健康后再启动
+      cloudsql:
+        condition: service_healthy
+      redis:
+        condition: service_started
     volumes:
-      - ../.gcp/dev-sa-key.json:/app/.gcp/dev-sa.json:ro
+      - ../.gcp:/app/.gcp:ro
 
   flower:
     image: mher/flower
-    # 关键修正：Flower也需要知道broker的地址
     command: --broker=${CELERY_BROKER_URL}
     ports:
       - "5555:5555"
