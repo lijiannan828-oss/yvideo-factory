@@ -1,4 +1,3 @@
-version: "3.9"
 
 services:
   # ============== Cloud SQL Proxy sidecar（本地容器 → Cloud SQL 实例） ==============
@@ -7,7 +6,7 @@ services:
     # 5432 是容器内部监听端口；应用容器通过 "cloudsql:5432" 访问数据库
     command:
       - "--port=5432"
-      - "${CLOUD_SQL_CONN_NAME}"       # 形如 PROJECT:REGION:INSTANCE（写在 ../.env.dev）
+      - "${CLOUD_SQL_CONN_NAME}"       # 形如 PROJECT:REGION:INSTANCE（写在 ../.env）
     environment:
       - GOOGLE_APPLICATION_CREDENTIALS=/config/sa.json
     volumes:

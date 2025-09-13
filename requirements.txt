@@ -21,11 +21,11 @@ python-dotenv~=1.0
 SQLAlchemy~=2.0
 alembic~=1.13
 psycopg2-binary~=2.9
-
+sqlmodel==0.0.18
 # =========================
 # Task Queue (Celery + Redis)
 # =========================
-celery~=5.3
+celery==5.4.0
 redis~=5.0
 flower~=2.0     # 可选：任务监控UI
 
@@ -47,9 +47,9 @@ Jinja2~=3.1
 # =========================
 google-cloud-storage~=2.17   # 如用 GCS 存储
 prometheus-client~=0.20      # 指标上报
-
 google-genai==0.3.0
-
+google-cloud-aiplatform==1.53.0
+google-auth==2.33.0
 # =========================
 # Media (optional for MVP)
 # =========================

@@ -1,0 +1,48 @@
+# Dockerfile.worker - For Celery Background Workers
+
+# ==============================================================================
+# Stage 1: Builder - This stage is almost identical to the API builder.
+# We leverage Docker's ability to cache shared layers.
+# ==============================================================================
+FROM python:3.11-slim as builder
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN python -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
+
+
+# ==============================================================================
+# Stage 2: Final - Building the lean worker image.
+# ==============================================================================
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Copy the pre-installed dependencies from the builder stage.
+COPY --from=builder /opt/venv /opt/venv
+
+# Copy all our application code. The worker needs access to the task definitions.
+COPY . .
+
+# Activate the virtual environment by setting the PATH.
+ENV PATH="/opt/venv/bin:$PATH"
+
+# The command to start the Celery worker. This is the key difference.
+# -A points to the Celery application instance.
+# -l sets the logging level.
+# -Q specifies which queues this worker should listen to.
+# We will pass the specific queues to listen to via an environment variable
+# for flexibility, but we set a default here.
+# Note: The path to celery_app might need adjustment after we finalize the project structure.
+# Based on our discussion, it should be in 'services.api.app.core.celery_app'.
+CMD ["celery", "-A", "services.api.app.core.celery_app:celery_app", "worker", "-l", "info", "-Q", "default,cpu_queue"]

@@ -1,0 +1,46 @@
+# .dockerignore (最终版)
+
+# Git
+.git
+.gitignore
+
+# Docker - 这些文件只在构建时使用，不需要进入镜像本身
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# Python - 虚拟环境和缓存
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# macOS specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
+
+# 本地开发时产生的输出和日志
+dev_outputs/
+*.log
+*.log.*
+
+# 本地配置文件和密钥 (这些应该在运行时挂载或注入，绝不能打包)
+.env
+.env.*
+.gcp/
+local_settings.py
+
+# 测试和文档 (如果不需要在生产环境中运行测试)
+tests/
+docs/
