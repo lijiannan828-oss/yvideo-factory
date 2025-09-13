@@ -1,18 +1,18 @@
-# infra/docker-compose.dev.yml (最终修正版 V2)
+# infra/docker-compose.dev.yml (最终修正版 V4)
 services:
   cloudsql:
-    image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.13.0
+    image: gcr.io/cloud-sql-connectors/cloud-sql-proxy:2.8.0
     command:
       - "--port=5432"
-      - "--address=0.0.0.0"
       - "${CLOUD_SQL_CONN_NAME}"
+    # 关键修正 1: 将本地的密钥文件直接挂载到容器内的一个特定路径，例如 /secrets/sa.json
     volumes:
-      - ../.gcp/dev-sa-key.json:/config:ro
+      - ../.gcp/dev-sa-key.json:/secrets/sa.json:ro
     environment:
-      - "GOOGLE_APPLICATION_CREDENTIALS=/config"
+      # 关键修正 2: GOOGLE_APPLICATION_CREDENTIALS 必须精确指向挂载后的文件路径
+      - "GOOGLE_APPLICATION_CREDENTIALS=/secrets/sa.json"
     env_file:
       - ../.env
-    # 关键修正 1: 增加健康检查，确保代理完全可用
     healthcheck:
       test: ["CMD-SHELL", "nc -z 127.0.0.1 5432"]
       interval: 5s
@@ -33,7 +33,6 @@ services:
     env_file:
       - ../.env
     depends_on:
-      # 关键修正 2: 让API服务等待cloudsql健康后再启动
       cloudsql:
         condition: service_healthy
       redis:
@@ -46,11 +45,9 @@ services:
       context: ..
       dockerfile: Dockerfile.worker
     command: /opt/venv/bin/celery -A services.api.app.core.celery_app:celery_app worker -l info
-    user: "1000:1000" # 避免权限问题
     env_file:
       - ../.env
     depends_on:
-      # 关键修正 3: 让Worker服务也等待cloudsql健康后再启动
       cloudsql:
         condition: service_healthy
       redis:
@@ -60,16 +57,16 @@ services:
 
   flower:
     image: mher/flower
-    # 关键修正: 将 command 指令修改为列表格式 (exec form)
+    # 关键修正 3: 使用正确的列表格式 (exec form) 来定义命令和参数
     command: 
       - "celery"
-      - "--broker=${CELERY_BROKER_URL}"
+      - "-A"
+      - "services.api.app.core.celery_app:celery_app"
       - "flower"
+      - "--broker=${CELERY_BROKER_URL}"
     ports:
       - "5555:5555"
     env_file:
       - ../.env
     depends_on:
       - redis
-      - worker
-    restart: unless-stopped
