@@ -70,7 +70,6 @@ jobs:
             APP_TIMEZONE=America/Chicago
             LOG_LEVEL=INFO
             HOST=0.0.0.0
-            PORT=8080
             SERVICE_API_KEY=${{ secrets.SERVICE_API_KEY }}
             CORS_ORIGINS=https://luxivideo.com,https://*.luxivideo.com
             GCP_PROJECT_ID=${{ env.GCP_PROJECT_ID }}
@@ -212,6 +211,7 @@ jobs:
             docker compose -f infra/docker-compose.prod.yml up -d --no-deps worker
 
   deploy-frontend:
+    needs: deploy-api-to-cloud-run
     name: Deploy Frontend to Firebase
     runs-on: ubuntu-latest
     steps:

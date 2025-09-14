@@ -5,7 +5,8 @@ round2.json
 full.json
 .DS_Store
 EOF
-gcp/
+.gcp/
+.gcp/dev-sa-key.json
 *.env
 params.env
 .env
