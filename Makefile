@@ -1,132 +1,97 @@
-SHELL := /bin/bash
+# ========= 基本变量 =========
+ENV ?= .env
+COMPOSE ?= infra/docker-compose.dev.yml
+DC = docker compose --env-file $(ENV) -f $(COMPOSE)
 
-# =========================
-# 基础配置（按需修改）
-# =========================
-COMPOSE_FILE ?= infra/docker-compose.dev.yml
-RUN          := docker compose -f $(COMPOSE_FILE)
-EXEC_API     := docker compose -f $(COMPOSE_FILE) exec api sh -lc
+API_BASE ?= http://localhost:8000
+API_PREFIX ?= /api/v1
+API_URL = $(API_BASE)$(API_PREFIX)
 
-# 镜像仓库（GHCR / Docker Hub 均可）
-REGISTRY ?= ghcr.io
-OWNER    ?= lijiannan828-oss  # 例如: lijiannan828-oss
-APP      ?= yvideo-factory
-TAG      ?= $(shell git rev-parse --short HEAD)
-IMAGE    ?= $(REGISTRY)/$(OWNER)/$(APP):$(TAG)
+# 把 .env 里的 KEY=VALUE 导出为当前 make 的环境变量（供 curl 用）
+# 仅提取形如 VAR=xxx 的行；忽略注释/空行
+export $(shell sed -n 's/^\([A-Za-z_][A-Za-z0-9_]*\)=.*/\1/p' $(ENV))
 
-# 远程服务器（镜像拉取部署）
-DEPLOY_HOST ?= ubuntu@www.luxivideo.com
-DEPLOY_DIR  ?= /opt/yvideo-factory
+.PHONY: help up down restart rebuild ps config logs logs-api logs-worker logs-flower logs-cloudsql \
+        health mvp db celery gcs check-proxy check-redis open-flower
 
-# =========================
-# 帮助
-# =========================
-.PHONY: help
 help:
-	@echo "可用目标："
-	@echo "  make up            - 启动开发环境（compose up -d --build）"
-	@echo "  make down          - 关闭开发环境"
-	@echo "  make logs          - 跟随查看日志"
-	@echo "  make ps            - 查看容器状态"
-	@echo "  make restart       - 重启 api 容器"
-	@echo "  make rebuild       - 强制重建（--no-cache）并启动"
-	@echo "  make shell         - 进入 api 容器 shell"
-	@echo "  make dev-setup     - 在 api 容器内安装 ruff/black/pytest（一次即可）"
-	@echo "  make fmt           - 代码格式化（容器内：ruff format + black）"
-	@echo "  make lint          - 代码静态检查（容器内：ruff）"
-	@echo "  make test          - 运行测试（容器内：pytest）"
-	@echo "  make check         - lint + test"
-	@echo "  make image         - 本地构建 amd64 镜像"
-	@echo "  make pushimage     - 构建并推送镜像到仓库"
-	@echo "  make tag_latest    - 同步推送 latest 标签"
-	@echo "  make deploy TAG=sha - 到服务器拉取镜像并启动（使用 .env.prod）"
-	@echo "  make smoke         - 运行本地冒烟脚本 scripts/validate_storyboard.sh"
-	@echo ""
+	@echo "常用命令："
+	@echo "  make up            # 启动/更新所有服务（使用 $(COMPOSE) 和 $(ENV)）"
+	@echo "  make down          # 停止并清理"
+	@echo "  make ps            # 查看容器状态"
+	@echo "  make logs          # 跟随所有服务日志（尾部 200 行）"
+	@echo "  make logs-api      # 仅 API 日志"
+	@echo "  make logs-worker   # 仅 Worker 日志"
+	@echo "  make logs-flower   # 仅 Flower 日志"
+	@echo "  make logs-cloudsql # 仅 Cloud SQL Proxy 日志"
+	@echo "  make config        # 展开后的 compose 配置（用于检查变量插值是否正确）"
+	@echo "  make health        # API 健康检查（/health）"
+	@echo "  make mvp           # 访问 MVP 自测接口：$(API_BASE)/api/v1/mvp-test"
+	@echo "  make db            # /debug/db  自检（建表/插入/查询）"
+	@echo "  make celery        # /debug/celery 自检（入队一个任务）"
+	@echo "  make gcs           # /debug/gcs 自检（写入并读回 GCS）"
+	@echo "  make check-proxy   # 查看 Cloud SQL Proxy 最新日志片段"
+	@echo "  make check-redis   # 对本地 Redis 做 PING"
+	@echo "  make open-flower   # 打开 Flower UI 地址"
 
-# =========================
-# 开发环境（Compose）
-# =========================
-.PHONY: up down logs ps restart rebuild shell
+# ========= 容器生命周期 =========
 up:
-	$(RUN) up -d --build
-
-up-dev:
-	docker compose --env-file .env -f infra/docker-compose.dev.yml up -d --build
+	$(DC) up -d --build
 
 down:
-	$(RUN) down
+	$(DC) down
 
-logs:
-	$(RUN) logs -f --tail=200
-
-ps:
-	$(RUN) ps
-
-restart:
-	$(RUN) restart api
+restart: down up
 
 rebuild:
-	$(RUN) build --no-cache
-	$(RUN) up -d
+	$(DC) build --no-cache
 
-shell:
-	$(EXEC_API) 'bash || sh'
+ps:
+	$(DC) ps
 
-# =========================
-# 开发工具（容器内执行）
-# =========================
-.PHONY: dev-setup fmt lint test check
-dev-setup:
-	$(EXEC_API) 'python -m pip install -q "ruff==0.5.6" "black==24.4.2" "pytest==8.3.2" "pre-commit==3.7.1" && python -m pip list | grep -E "ruff|black|pytest|pre-commit" || true'
+# 展开后的配置，用于检查：CLOUD_SQL_CONN_NAME / CELERY_BROKER_URL 等是否已被插值
+config:
+	$(DC) config | sed -n '1,200p'
 
-fmt:
-	$(EXEC_API) 'python -m ruff format . && python -m black .'
+# ========= 日志快捷键 =========
+logs:
+	$(DC) logs -f --tail=200
 
-lint:
-	$(EXEC_API) 'python -m ruff check .'
+logs-api:
+	$(DC) logs -f api
 
-test:
-	$(EXEC_API) 'python -m pytest -q'
+logs-worker:
+	$(DC) logs -f worker
 
-check: lint test
+logs-flower:
+	$(DC) logs -f flower
 
-.PHONY: autofix
-autofix:
-	$(EXEC_API) 'python -m ruff check . --fix --unsafe-fixes && python -m ruff format . && python -m black .'
+logs-cloudsql:
+	$(DC) logs -f cloudsql
 
+# ========= 自检（需要 .env 里存在 SERVICE_API_KEY）=========
+health:
+	curl -fsSL -H "X-API-KEY: $(SERVICE_API_KEY)" $(API_URL)/health || true
 
-# =========================
-# 镜像构建 / 推送（amd64）
-# =========================
-.PHONY: image pushimage tag_latest
-image:
-	docker buildx build --platform linux/amd64 -f Dockerfile.api -t $(IMAGE) .
+# 你提供的 MVP 测试地址
+mvp:
+	curl -fsSL -H "X-API-KEY: $(SERVICE_API_KEY)" $(API_BASE)/api/v1/mvp-test || true
 
-pushimage:
-	docker buildx build --platform linux/amd64 -f Dockerfile.api -t $(IMAGE) --push .
+db:
+	curl -fsSL -X POST -H "X-API-KEY: $(SERVICE_API_KEY)" $(API_URL)/debug/db || true
 
-tag_latest:
-	docker buildx build --platform linux/amd64 -f Dockerfile.api -t $(REGISTRY)/$(OWNER)/$(APP):latest --push .
+celery:
+	curl -fsSL -X POST -H "X-API-KEY: $(SERVICE_API_KEY)" $(API_URL)/debug/celery || true
 
-# =========================
-# 部署（服务器拉镜像）
-# 服务器上需存在：
-#   /opt/yvideo-factory/.env.prod （含 SERVICE_API_KEY/GOOGLE_API_KEY 等）
-#   /opt/yvideo-factory/infra/docker-compose.prod.yml
-# =========================
-.PHONY: deploy
-deploy:
-	@test -n "$(TAG)" || (echo "请提供 TAG，例如: make deploy TAG=$$(git rev-parse --short HEAD)"; exit 1)
-	ssh $(DEPLOY_HOST) "cd $(DEPLOY_DIR) && \
-	export IMAGE_TAG=$(TAG) && \
-	docker compose -f infra/docker-compose.prod.yml --env-file .env.prod pull && \
-	docker compose -f infra/docker-compose.prod.yml --env-file .env.prod up -d && \
-	docker compose -f infra/docker-compose.prod.yml --env-file .env.prod ps"
+gcs:
+	curl -fsSL -X POST -H "X-API-KEY: $(SERVICE_API_KEY)" $(API_URL)/debug/gcs || true
 
-# =========================
-# 冒烟（本地）
-# =========================
-.PHONY: smoke
-smoke:
-	@test -x scripts/validate_storyboard.sh || (echo "❌ 缺少 scripts/validate_storyboard.sh 或未加可执行权限"; exit 1)
-	bash scripts/validate_storyboard.sh
+# ========= 辅助检查 =========
+check-proxy:
+	$(DC) logs cloudsql | tail -n 30
+
+check-redis:
+	$(DC) exec redis redis-cli PING || true
+
+open-flower:
+	@echo "Flower UI -> http://localhost:5555"
