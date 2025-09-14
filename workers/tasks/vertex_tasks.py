@@ -3,11 +3,11 @@
 Celery 异步任务：调用 Vertex -> 写入 GCS
 """
 import json
-from services.api.app.core.celery_app import celery  # 注意：你的 Celery 实例路径
+from services.api.app.core.celery_app import celery_app  # 注意：你的 Celery 实例路径
 from providers.llm.vertex_client import generate_once
 from providers.storage.gcs_io import write_text
 
-@celery.task(name="vertex.generate_and_store")
+@celery_app.task(name="vertex.generate_and_store")
 def vertex_generate_and_store(prompt: str,
                               temperature: float = 0.4,
                               max_tokens: int = 512,
