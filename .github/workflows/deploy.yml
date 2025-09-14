@@ -64,6 +64,7 @@ jobs:
           flags: >
             --service-account=sa-run-prod@${{ env.GCP_PROJECT_ID }}.iam.gserviceaccount.com
             --vpc-connector=${{ secrets.VPC_CONNECTOR }}
+            --add-cloudsql-instances=fleet-blend-469520-n7:us-central1:yvideo-factory-db-prod
           env_vars: |
             APP_NAME=YVideo Factory
             APP_ENV=prod
