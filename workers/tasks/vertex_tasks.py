@@ -7,10 +7,13 @@ from services.api.app.core.celery_app import celery_app  # 注意：你的 Celer
 from providers.llm.vertex_client import generate_once
 from providers.storage.gcs_io import write_text
 
-@celery_app.task(name="vertex.generate_and_store")
+@celery_app.task(
+        name="vertex.generate_and_store",
+        queue="default",                # 指定队列
+        routing_key="task.default"  )   # 指定路由键
 def vertex_generate_and_store(prompt: str,
                               temperature: float = 0.4,
-                              max_tokens: int = 512,
+                              max_tokens: int = 60000,
                               as_json: bool = False) -> dict:
     """
     异步：一次性生成 -> 写 GCS

@@ -45,4 +45,4 @@ ENV PATH="/opt/venv/bin:$PATH"
 # for flexibility, but we set a default here.
 # Note: The path to celery_app might need adjustment after we finalize the project structure.
 # Based on our discussion, it should be in 'services.api.app.core.celery_app'.
-CMD ["celery", "-A", "services.api.app.core.celery_app:celery_app", "worker", "-l", "info", "-Q", "default,cpu_queue"]
+CMD ["celery", "-A", "services.api.app.core.celery_app:celery_app", "worker", "-l", "info", "-Q", "default,cpu_queue,gpu_queue,analysis_queue,api_queue"]

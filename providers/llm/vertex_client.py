@@ -27,7 +27,7 @@ def _init_model() -> GenerativeModel:
 
 def generate_once(prompt: str,
                   temperature: float = 0.4,
-                  max_tokens: int = 512,
+                  max_tokens: int = 60000,
                   as_json: bool = False) -> str:
     """
     一次性生成完整文本
@@ -53,7 +53,7 @@ def generate_once(prompt: str,
 
 def generate_stream(prompt: str,
                     temperature: float = 0.6,
-                    max_tokens: int = 512) -> Generator[str, None, None]:
+                    max_tokens: int = 60000) -> Generator[str, None, None]:
     """
     流式生成（服务端逐片返回），适合前端 SSE/WS
     :yield: 每个增量文本片段
