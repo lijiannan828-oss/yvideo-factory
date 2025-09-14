@@ -56,7 +56,7 @@ jobs:
           credentials_json: '${{ secrets.GCP_SA_KEY }}'
       
       - name: Deploy to Cloud Run
-        uses: 'google-github-actions/deploy-run@v2'
+        uses: 'google-github-actions/deploy-cloudrun@v2'
         with:
           service: ${{ env.API_SERVICE_NAME }}
           region: ${{ env.GCP_REGION }}
@@ -144,6 +144,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             set -e
+            
             cd yvideo-factory
             git pull origin main
 
@@ -206,8 +207,8 @@ jobs:
             fi
 
             gcloud auth configure-docker ${{ env.GAR_LOCATION }} -q
-            docker-compose -f infra/docker-compose.prod.yml pull worker
-            docker-compose -f infra/docker-compose.prod.yml up -d --no-deps worker
+            docker compose -f infra/docker-compose.prod.yml pull worker
+            docker compose -f infra/docker-compose.prod.yml up -d --no-deps worker
 
   deploy-frontend:
     name: Deploy Frontend to Firebase
@@ -222,5 +223,4 @@ jobs:
         run: npm install -g firebase-tools
       - name: Deploy to Firebase Hosting
         run: |
-          cd ui/admin
           firebase deploy --token "${{ secrets.FIREBASE_TOKEN }}" --only hosting -P ${{ env.GCP_PROJECT_ID }}
