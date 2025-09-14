@@ -47,8 +47,10 @@ Jinja2~=3.1
 # =========================
 google-cloud-storage~=2.17   # 如用 GCS 存储
 prometheus-client~=0.20      # 指标上报
-google-genai==0.3.0
-google-cloud-aiplatform==1.53.0
+#LLM
+google-cloud-aiplatform>=1.85.0
+# （可选，作迁移动手备用）
+google-genai>=0.4
 google-auth==2.33.0
 # =========================
 # Media (optional for MVP)
@@ -60,3 +62,4 @@ pydub~=0.25                  # 简单音频处理
 # Logging
 # =========================
 loguru~=0.7
+

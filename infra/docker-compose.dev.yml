@@ -38,7 +38,9 @@ services:
       - cloudsql
       - redis
     volumes:
-      - ../.gcp:/app/.gcp:ro
+      - ../.gcp/dev-sa-key.json:/secrets/sa.json:ro
+    environment:
+      GOOGLE_APPLICATION_CREDENTIALS: /app/.gcp/dev-sa-key.json
 
   worker:
     build:
@@ -51,7 +53,9 @@ services:
       - cloudsql
       - redis
     volumes:
-      - ../.gcp:/app/.gcp:ro
+      - ../.gcp/dev-sa-key.json:/secrets/sa.json:ro
+    environment:
+      GOOGLE_APPLICATION_CREDENTIALS: /app/.gcp/dev-sa-key.json
 
   flower:
     build:

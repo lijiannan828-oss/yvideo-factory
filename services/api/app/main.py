@@ -17,7 +17,8 @@ from .api.v1 import (
     routes_json,
     routes_stream,
     routes_chat,
-    routes_mvp_test
+    routes_mvp_test,
+    routes_vertex
 )
 
 # -----------------------------------------------------------------------------
@@ -74,7 +75,7 @@ app.include_router(routes_json.router, prefix="/api/v1", tags=["json"])
 app.include_router(routes_stream.router, prefix="/api/v1", tags=["stream"])
 app.include_router(routes_chat.router, prefix="/api/v1", tags=["chat"])
 app.include_router(routes_mvp_test.router, prefix="/api/v1", tags=["MVP Test"])
-
+app.include_router(routes_vertex.router, prefix="/api/v1", tags=["vertex"])
 # -----------------------------------------------------------------------------
 # 根路由 / 健康检查 (Root Route / Health Check)
 # -----------------------------------------------------------------------------
