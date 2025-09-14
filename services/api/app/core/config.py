@@ -2,6 +2,7 @@
 
 import os
 from typing import Optional
+from pathlib import Path
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
@@ -61,8 +62,11 @@ class Settings(BaseSettings):
     
     # Pydantic-settings 的配置类
     # model_config 用于指定从哪个文件读取环境变量（默认为 .env）
-    model_config = SettingsConfigDict(env_file=".env", env_file_encoding='utf-8', extra='ignore')
-
+    model_config = SettingsConfigDict(
+        env_file=str(Path(__file__).parent.parent.parent.parent / ".env"),
+        env_file_encoding='utf-8',
+        extra='ignore'
+    )
 # 创建一个全局唯一的settings实例
 # 项目中其他任何地方需要配置时，都应该从这里导入
 # from services.api.app.core.config import settings

@@ -40,7 +40,7 @@ services:
     volumes:
       - ../.gcp/dev-sa-key.json:/secrets/sa.json:ro
     environment:
-      GOOGLE_APPLICATION_CREDENTIALS: /app/.gcp/dev-sa-key.json
+      GOOGLE_APPLICATION_CREDENTIALS: /secrets/sa.json
 
   worker:
     build:
@@ -55,7 +55,7 @@ services:
     volumes:
       - ../.gcp/dev-sa-key.json:/secrets/sa.json:ro
     environment:
-      GOOGLE_APPLICATION_CREDENTIALS: /app/.gcp/dev-sa-key.json
+      GOOGLE_APPLICATION_CREDENTIALS: /secrets/sa.json
 
   flower:
     build:
