@@ -1,0 +1,227 @@
+name: Deploy to GCP Production
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+  GCP_REGION: us-central1
+  GAR_LOCATION: us-central1-docker.pkg.dev
+  GAR_REPOSITORY: videofactory-repo
+  API_SERVICE_NAME: yvideo-factory-api
+  WORKER_VM_ZONE: us-central1-a
+  WORKER_VM_NAME: github-actions-vm
+
+jobs:
+  build-and-push-api:
+    name: Build and Push API Image
+    runs-on: ubuntu-latest
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Authenticate to Google Cloud
+        uses: 'google-github-actions/auth@v2'
+        with:
+          credentials_json: '${{ secrets.GCP_SA_KEY }}'
+
+      - name: Set up Cloud SDK
+        uses: 'google-github-actions/setup-gcloud@v2'
+
+      - name: Configure Docker for Artifact Registry
+        run: gcloud auth configure-docker $GAR_LOCATION
+
+      - name: Build and push API image
+        run: |-
+          docker build -t $GAR_LOCATION/$GCP_PROJECT_ID/$GAR_REPOSITORY/api:latest -f Dockerfile.api .
+          docker push $GAR_LOCATION/$GCP_PROJECT_ID/$GAR_REPOSITORY/api:latest
+
+  deploy-api-to-cloud-run:
+    name: Deploy API to Cloud Run
+    needs: build-and-push-api
+    runs-on: ubuntu-latest
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+    steps:
+      - name: Authenticate to Google Cloud
+        uses: 'google-github-actions/auth@v2'
+        with:
+          credentials_json: '${{ secrets.GCP_SA_KEY }}'
+      
+      - name: Deploy to Cloud Run
+        uses: 'google-github-actions/deploy-run@v2'
+        with:
+          service: ${{ env.API_SERVICE_NAME }}
+          region: ${{ env.GCP_REGION }}
+          image: ${{ env.GAR_LOCATION }}/${{ env.GCP_PROJECT_ID }}/${{ env.GAR_REPOSITORY }}/api:latest
+          service_account: 'sa-run-prod@${{ env.GCP_PROJECT_ID }}.iam.gserviceaccount.com'
+          vpc_connector:  ${{ secrets.VPC_CONNECTOR }}
+          env_vars: |
+            APP_NAME=YVideo Factory
+            APP_ENV=prod
+            APP_TIMEZONE=America/Chicago
+            LOG_LEVEL=INFO
+            HOST=0.0.0.0
+            PORT=8080
+            SERVICE_API_KEY=${{ secrets.SERVICE_API_KEY }}
+            CORS_ORIGINS=https://luxivideo.com,https://*.luxivideo.com
+            GCP_PROJECT_ID=${{ env.GCP_PROJECT_ID }}
+            GCP_REGION=${{ env.GCP_REGION }}
+            VERTEX_PROJECT=${{ env.GCP_PROJECT_ID }}
+            VERTEX_LOCATION=us-central1
+            VERTEX_MODEL=gemini-2.5-pro
+            CLOUD_SQL_CONN_NAME=${{ secrets.CLOUD_SQL_CONN_NAME }}
+            DATABASE_URL=postgresql+psycopg2://appprod:${{ secrets.POSTGRES_PASSWORD }}@/yvideo_prod?host=/cloudsql/${{ secrets.CLOUD_SQL_CONN_NAME }}
+            REDIS_URL=redis://${{ secrets.REDIS_HOST }}:6379/0
+            CELERY_BROKER_URL=redis://${{ secrets.REDIS_HOST }}:6379/0
+            CELERY_RESULT_BACKEND=redis://${{ secrets.REDIS_HOST }}:6379/0
+            CELERY_TIMEZONE=America/Chicago
+            CELERY_WORKER_CONCURRENCY=8
+            CELERY_PREFETCH_MULTIPLIER=1
+            CELERY_TASK_ACKS_LATE=true
+            CELERY_QUEUES=high_priority,default,gpu_queue,api_queue,cpu_queue,analysis_queue,low_priority
+            GCS_ENABLE=true
+            GCS_BUCKET_NAME=${{ secrets.GCS_BUCKET_NAME }}
+            GCS_OUTPUT_PREFIX=prod
+            DEFAULT_STORAGE_URI=gs://video_fatory/yvideo/
+            GUNICORN_WORKERS=4
+            GUNICORN_THREADS=2
+            UVICORN_RELOAD=false
+            WORKFLOWS_DIR=./orchestrator/workflows
+            ROUTER_RULES_PATH=./rules/router.yaml
+            QC_RULES_DIR=./rules/qc
+            PROMETHEUS_ENABLE=true
+            PROMETHEUS_METRICS_PATH=/metrics
+            BASIC_AUTH_USER=admin
+            BASIC_AUTH_PASS=${{ secrets.BASIC_AUTH_PASS }}
+            TEMPERATURE=0.7
+            TOP_P=0.95
+            MAX_OUTPUT_TOKENS=60000
+
+  build-and-push-worker:
+    name: Build and Push Worker Image
+    runs-on: ubuntu-latest
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Authenticate to Google Cloud
+        uses: 'google-github-actions/auth@v2'
+        with:
+          credentials_json: '${{ secrets.GCP_SA_KEY }}'
+
+      - name: Set up Cloud SDK
+        uses: 'google-github-actions/setup-gcloud@v2'
+
+      - name: Configure Docker
+        run: gcloud auth configure-docker $GAR_LOCATION
+
+      - name: Build and push Worker image
+        run: |-
+          docker build -t $GAR_LOCATION/$GCP_PROJECT_ID/$GAR_REPOSITORY/worker:latest -f Dockerfile.worker .
+          docker push $GAR_LOCATION/$GCP_PROJECT_ID/$GAR_REPOSITORY/worker:latest
+          
+  deploy-worker-to-vm:
+    name: Deploy Worker to VM
+    needs: build-and-push-worker
+    runs-on: ubuntu-latest
+    steps:
+      - name: SSH and deploy
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VM_HOST_IP }}
+          username: ${{ secrets.VM_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            set -e
+            cd yvideo-factory
+            git pull origin main
+
+            # 检查关键文件
+            if [ ! -f infra/docker-compose.prod.yml ]; then
+              echo "ERROR: docker-compose.prod.yml not found!"
+              exit 1
+            fi
+            if [ ! -d orchestrator/workflows ]; then
+              echo "ERROR: orchestrator/workflows directory not found!"
+              exit 1
+            fi
+
+            # 生成生产环境配置文件
+            cat <<EOF > infra/.env.prod
+APP_NAME=YVideo Factory
+APP_ENV=prod
+APP_TIMEZONE=America/Chicago
+LOG_LEVEL=INFO
+HOST=0.0.0.0
+PORT=8080
+SERVICE_API_KEY=${{ secrets.SERVICE_API_KEY }}
+CORS_ORIGINS=https://luxivideo.com,https://*.luxivideo.com
+GCP_PROJECT_ID=${{ env.GCP_PROJECT_ID }}
+GCP_REGION=${{ env.GCP_REGION }}
+VERTEX_PROJECT=${{ env.GCP_PROJECT_ID }}
+VERTEX_LOCATION=us-central1
+VERTEX_MODEL=gemini-2.5-pro
+CLOUD_SQL_CONN_NAME=${{ secrets.CLOUD_SQL_CONN_NAME }}
+DATABASE_URL_VM="postgresql+psycopg2://appprod:${{ secrets.POSTGRES_PASSWORD }}@${{ secrets.POSTGRES_HOST }}:5432/yvideo_prod"
+REDIS_URL=redis://${{ secrets.REDIS_HOST }}:6379/0
+CELERY_BROKER_URL=redis://${{ secrets.REDIS_HOST }}:6379/0
+CELERY_RESULT_BACKEND=redis://${{ secrets.REDIS_HOST }}:6379/0
+CELERY_TIMEZONE=America/Chicago
+CELERY_WORKER_CONCURRENCY=8
+CELERY_PREFETCH_MULTIPLIER=1
+CELERY_TASK_ACKS_LATE=true
+CELERY_QUEUES=high_priority,default,gpu_queue,api_queue,cpu_queue,analysis_queue,low_priority
+GCS_ENABLE=true
+GCS_BUCKET_NAME=${{ secrets.GCS_BUCKET_NAME }}
+GCS_OUTPUT_PREFIX=prod
+DEFAULT_STORAGE_URI=gs://video_fatory/yvideo/
+GUNICORN_WORKERS=4
+GUNICORN_THREADS=2
+UVICORN_RELOAD=false
+WORKFLOWS_DIR=./orchestrator/workflows
+ROUTER_RULES_PATH=./rules/router.yaml
+QC_RULES_DIR=./rules/qc
+PROMETHEUS_ENABLE=true
+PROMETHEUS_METRICS_PATH=/metrics
+BASIC_AUTH_USER=admin
+BASIC_AUTH_PASS=${{ secrets.BASIC_AUTH_PASS }}
+TEMPERATURE=0.7
+TOP_P=0.95
+MAX_OUTPUT_TOKENS=60000
+EOF
+
+            # 检查关键变量
+            if ! grep -q "SERVICE_API_KEY=" infra/.env.prod; then
+              echo "ERROR: SERVICE_API_KEY not set in .env.prod!"
+              exit 1
+            fi
+
+            gcloud auth configure-docker ${{ env.GAR_LOCATION }} -q
+            docker-compose -f infra/docker-compose.prod.yml pull worker
+            docker-compose -f infra/docker-compose.prod.yml up -d --no-deps worker
+
+  deploy-frontend:
+    name: Deploy Frontend to Firebase
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+      - name: Deploy to Firebase Hosting
+        run: |
+          cd ui/admin
+          firebase deploy --token "${{ secrets.FIREBASE_TOKEN }}" --only hosting -P ${{ env.GCP_PROJECT_ID }}
