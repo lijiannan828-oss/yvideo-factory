@@ -7,7 +7,6 @@ full.json
 EOF
 gcp/
 *.env
-*.json
 params.env
 .env
 .idea/

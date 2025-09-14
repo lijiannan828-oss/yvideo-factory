@@ -61,8 +61,9 @@ jobs:
           service: ${{ env.API_SERVICE_NAME }}
           region: ${{ env.GCP_REGION }}
           image: ${{ env.GAR_LOCATION }}/${{ env.GCP_PROJECT_ID }}/${{ env.GAR_REPOSITORY }}/api:latest
-          service_account: 'sa-run-prod@${{ env.GCP_PROJECT_ID }}.iam.gserviceaccount.com'
-          vpc_connector:  ${{ secrets.VPC_CONNECTOR }}
+          flags: >
+            --service-account=sa-run-prod@${{ env.GCP_PROJECT_ID }}.iam.gserviceaccount.com
+            --vpc-connector=${{ secrets.VPC_CONNECTOR }}
           env_vars: |
             APP_NAME=YVideo Factory
             APP_ENV=prod
@@ -144,7 +145,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             set -e
-            
+
             cd yvideo-factory
             git pull origin main
 
