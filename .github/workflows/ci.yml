@@ -15,6 +15,9 @@ jobs:
     name: Backend Checks
     runs-on: ubuntu-latest
     steps:
+      - name: Clean stray local venv
+        run: rm -rf .venv || true
+
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -51,8 +54,13 @@ jobs:
       - name: Lint with flake8
         working-directory: ${{ env.BACKEND_DIR }}
         run: |
-          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-
+            flake8 . \
+                --count \
+                --select=E9,F63,F7,F82 \
+                --show-source \
+                --statistics \
+                --exclude .venv,venv,env,.git,__pycache__,.mypy_cache,.pytest_cache,build,dist,node_modules,*.egg-info,**/site-packages/**
+  
       - name: Run tests
         working-directory: ${{ env.BACKEND_DIR }}
         run: |
