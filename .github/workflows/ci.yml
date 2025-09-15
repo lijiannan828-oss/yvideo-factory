@@ -1,88 +1,83 @@
 # .github/workflows/ci.yml
-
-# 工作流名称
 name: Continuous Integration
 
-# 触发条件
 on:
-  # 1. 当有代码推送到 main 分支时触发 (例如 PR 合并后)
   push:
     branches:
       - main
-  # 2. 当有代码推送到任何 feature/* 开头的分支时触发
       - 'feature/**'
-  # 3. 当创建或更新一个指向 main 分支的 Pull Request 时触发
   pull_request:
-    branches:
-      - main
+    branches: [ main ]
 
-# CI 任务
 jobs:
   # --- 后端检查任务 ---
   backend-checks:
     name: Backend Checks
     runs-on: ubuntu-latest
     steps:
-      # 1. 拉取代码
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2. 设置 Python 环境
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11' # 您可以根据项目需求修改 Python 版本
-          cache: 'pip' # 缓存 pip 依赖，加速后续构建
-          venv-path: .venv # 指定虚拟环境路径
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: |
+            requirements.txt
+            requirements-dev.txt
 
-      # 3. 安装 Python 依赖
-      - name: Install dependencies
-        run: python -m pip install -r requirements.txt
-      - name: Run tests
-        run: python -m pytest
-
-      # 4. 运行代码风格检查 (Linting) - 示例使用 flake8
-      # 您需要确保 flake8 已经添加到 dev-requirements.txt 中
-      - name: Lint with flake8
+      - name: Pick backend dir (root or ./backend)
+        id: pickdir
         run: |
-          source .venv/bin/activate
-          # 停止构建如果存在 Python 语法错误或未定义的名称
+          if [ -d backend ]; then
+            echo "BACKEND_DIR=backend" >> "$GITHUB_ENV"
+          else
+            echo "BACKEND_DIR=." >> "$GITHUB_ENV"
+          fi
+
+      - name: Install dependencies
+        working-directory: ${{ env.BACKEND_DIR }}
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          # 安装测试/开发依赖（如果有），否则确保至少有 pytest/flake8
+          if [ -f requirements-dev.txt ]; then
+            pip install -r requirements-dev.txt
+          else
+            pip install pytest flake8
+          fi
+
+      - name: Lint with flake8
+        working-directory: ${{ env.BACKEND_DIR }}
+        run: |
           flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-          # 只做警告，不停止构建
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
-      # 5. 运行自动化测试
-      - name: Run tests with pytest
+      - name: Run tests
+        working-directory: ${{ env.BACKEND_DIR }}
         run: |
-          source .venv/bin/activate
-          pytest
-
+          # 统一用 python -m 调用，避免 PATH/入口脚本差异
+          python -m pytest -q
 
   # --- 前端检查任务 ---
   frontend-checks:
     name: Frontend Checks
     runs-on: ubuntu-latest
     steps:
-      # 1. 拉取代码
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2. 设置 Node.js 环境
       - name: Use Node.js 20.19.0
         uses: actions/setup-node@v3
         with:
           node-version: '20.19.0'
-          # 缓存 npm 依赖，加速后续构建
           cache: 'npm'
           cache-dependency-path: ui/admin/package-lock.json
 
-      # 3. 安装并构建前端项目
       - name: Install, Lint, and Build Frontend
-        # 指定工作目录为前端项目目录
         working-directory: ./ui/admin
         run: |
           npm install
-          # 假设您的 package.json 中有 "lint" 脚本
-          # 如果没有，Vite 默认不创建，可以暂时注释掉或添加该脚本
-          # npm run lint 
+          # npm run lint
           npm run build
