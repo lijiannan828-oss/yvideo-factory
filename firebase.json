@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "ui/admin",
+    "public": "ui/admin/dist",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -9,10 +9,7 @@
     "rewrites": [
       {
         "source": "/api/**",
-        "run": {
-          "serviceId": "yvideo-factory-api",
-          "region": "us-central1"
-        }
+        "destination": "https://yvideo-factory-api-969581645484.us-central1.run.app"
       },
       {
         "source": "**",

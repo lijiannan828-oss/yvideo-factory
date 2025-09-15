@@ -1,0 +1,89 @@
+# .github/workflows/ci.yml
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - main
+      - 'feature/**'
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  # --- 后端检查任务 ---
+  backend-checks:
+    name: Backend Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clean stray local venv
+        run: rm -rf .venv || true
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: |
+            requirements.txt
+            requirements-dev.txt
+
+      - name: Pick backend dir (root or ./backend)
+        id: pickdir
+        run: |
+          if [ -d backend ]; then
+            echo "BACKEND_DIR=backend" >> "$GITHUB_ENV"
+          else
+            echo "BACKEND_DIR=." >> "$GITHUB_ENV"
+          fi
+
+      - name: Install dependencies
+        working-directory: ${{ env.BACKEND_DIR }}
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          # 安装测试/开发依赖（如果有），否则确保至少有 pytest/flake8
+          if [ -f requirements-dev.txt ]; then
+            pip install -r requirements-dev.txt
+          else
+            pip install pytest flake8
+          fi
+
+      - name: Lint with flake8
+        working-directory: ${{ env.BACKEND_DIR }}
+        run: |
+            flake8 . \
+                --count \
+                --select=E9,F63,F7,F82 \
+                --show-source \
+                --statistics \
+                --exclude .venv,venv,env,.git,__pycache__,.mypy_cache,.pytest_cache,build,dist,node_modules,*.egg-info,**/site-packages/**
+  
+     # - name: Run tests
+       # run: |
+          # 统一用 python -m 调用，避免 PATH/入口脚本差异
+        #  python -m pytest -q
+
+  # --- 前端检查任务 ---
+  frontend-checks:
+    name: Frontend Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 20.19.0
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.19.0'
+          cache: 'npm'
+          cache-dependency-path: ui/admin/package-lock.json
+
+      - name: Install, Lint, and Build Frontend
+        working-directory: ./ui/admin
+        run: |
+          npm install
+          # npm run lint
+          npm run build
