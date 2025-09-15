@@ -71,8 +71,7 @@ jobs:
             LOG_LEVEL=INFO
             HOST=0.0.0.0
             SERVICE_API_KEY=${{ secrets.SERVICE_API_KEY }}
-            CORS_ORIGINS=https://luxivideo.com,https://*.luxivideo.com,https://${{ secrets.FIREBASE_NEW_PROJECT_ID }}.web.app
-            GCP_PROJECT_ID=${{ env.GCP_PROJECT_ID }}
+            CORS_ORIGINS=https://luxivideo.com,https://*.luxivideo.com,https://video-factory-c8a2a.web.app
             GCP_REGION=${{ env.GCP_REGION }}
             VERTEX_PROJECT=${{ env.GCP_PROJECT_ID }}
             VERTEX_LOCATION=us-central1
@@ -167,14 +166,14 @@ jobs:
             echo "HOST=0.0.0.0" >> infra/.env.prod
             echo "PORT=8080" >> infra/.env.prod
             echo "SERVICE_API_KEY=${{ secrets.SERVICE_API_KEY }}" >> infra/.env.prod
-            echo "CORS_ORIGINS=https://luxivideo.com,https://*.luxivideo.com" >> infra/.env.prod
+            echo "CORS_ORIGINS=https://luxivideo.com,https://*.luxivideo.com,https://video-factory-c8a2a.web.app" >> infra/.env.prod
             echo "GCP_PROJECT_ID=${{ env.GCP_PROJECT_ID }}" >> infra/.env.prod
             echo "GCP_REGION=${{ env.GCP_REGION }}" >> infra/.env.prod
             echo "VERTEX_PROJECT=${{ env.GCP_PROJECT_ID }}" >> infra/.env.prod
             echo "VERTEX_LOCATION=us-central1" >> infra/.env.prod
             echo "VERTEX_MODEL=gemini-2.5-pro" >> infra/.env.prod
             echo "CLOUD_SQL_CONN_NAME=${{ secrets.CLOUD_SQL_CONN_NAME }}" >> infra/.env.prod
-            echo "DATABASE_URL_VM=postgresql+psycopg2://appprod:${{ secrets.POSTGRES_PASSWORD }}@${{ secrets.POSTGRES_HOST }}:5432/yvideo_prod" >> infra/.env.prod
+            echo "DATABASE_URL=postgresql+psycopg2://appprod:${{ secrets.POSTGRES_PASSWORD }}@/yvideo_prod?host=/cloudsql/${{ secrets.CLOUD_SQL_CONN_NAME }}" >> infra/.env.prod
             echo "REDIS_URL=redis://${{ secrets.REDIS_HOST }}:6379/0" >> infra/.env.prod
             echo "CELERY_BROKER_URL=redis://${{ secrets.REDIS_HOST }}:6379/0" >> infra/.env.prod
             echo "CELERY_RESULT_BACKEND=redis://${{ secrets.REDIS_HOST }}:6379/0" >> infra/.env.prod
