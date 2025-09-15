@@ -3,7 +3,7 @@
 import os
 from typing import Optional
 from pathlib import Path
-from pydantic import field_validator
+from typing import List
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
@@ -29,14 +29,11 @@ class Settings(BaseSettings):
     # -------------------------------------------------------------------------
     SERVICE_API_KEY: str
 
-    CORS_ORIGINS: list[str] = ["http://localhost:3000"]
+    CORS_ORIGINS: str = "http://localhost:3000"
 
-    @field_validator("CORS_ORIGINS", mode="before")
-    @classmethod
-    def assemble_cors_origins(cls, v):
-        if isinstance(v, str) and not v.startswith("["):
-            return [i.strip() for i in v.split(",")]
-        return v
+    @property
+    def cors_list(self) -> list[str]:
+        return [i.strip() for i in self.CORS_ORIGINS.split(",")]
 
     # -------------------------------------------------------------------------
     # 数据库 (PostgreSQL)
