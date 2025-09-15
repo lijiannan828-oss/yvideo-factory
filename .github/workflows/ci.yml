@@ -44,7 +44,7 @@ jobs:
       - name: Install dependencies
         run: .venv/bin/pip install -r requirements.txt
       - name: Run tests
-        run: .venv/bin/python3 -m pytest
+        run: .venv/bin/python -m pytest
 
       # 4. 运行代码风格检查 (Linting) - 示例使用 flake8
       # 您需要确保 flake8 已经添加到 dev-requirements.txt 中
