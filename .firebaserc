@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "fleet-blend-469520-n7"
-  }
+    "default": "video-factory-c8a2a",
+    "prod": "video-factory-c8a2a"
+  },
+  "targets": {},
+  "etags": {}
 }

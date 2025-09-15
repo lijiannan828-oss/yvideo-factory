@@ -72,7 +72,7 @@ jobs:
             LOG_LEVEL=INFO
             HOST=0.0.0.0
             SERVICE_API_KEY=${{ secrets.SERVICE_API_KEY }}
-            CORS_ORIGINS=https://luxivideo.com,https://*.luxivideo.com
+            CORS_ORIGINS=https://luxivideo.com,https://*.luxivideo.com,https://${{ secrets.FIREBASE_NEW_PROJECT_ID }}.web.app
             GCP_PROJECT_ID=${{ env.GCP_PROJECT_ID }}
             GCP_REGION=${{ env.GCP_REGION }}
             VERTEX_PROJECT=${{ env.GCP_PROJECT_ID }}
@@ -213,17 +213,42 @@ jobs:
             docker compose -f infra/docker-compose.prod.yml up -d --no-deps worker
 
   deploy-frontend:
+    # 依赖于后端API部署完成
     needs: deploy-api-to-cloud-run
     name: Deploy Frontend to Firebase
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js
+      # 1. 拉取代码
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2. 设置 Node.js 环境
+      - name: Use Node.js 18
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - name: Install Firebase CLI
-        run: npm install -g firebase-tools
-      - name: Deploy to Firebase Hosting
+          # 为 npm install 加速
+          cache: 'npm'
+          cache-dependency-path: ui/admin/package-lock.json
+
+      # 3. 构建前端项目 (关键步骤!)
+      - name: Build Frontend
+        # 指定工作目录，所有命令都在此目录下执行
+        working-directory: ./ui/admin
         run: |
-          firebase deploy --token "${{ secrets.FIREBASE_TOKEN }}" --only hosting -P ${{ env.GCP_PROJECT_ID }}
+          npm install
+          npm run build
+
+      # 4. 部署到 Firebase Hosting
+      - name: Deploy to Firebase Hosting
+        # 使用成熟的第三方 Action，比自己写脚本更稳定
+        uses: w9jds/firebase-action@master
+        with:
+          # 从项目根目录执行 deploy 命令
+          args: deploy --only hosting
+        env:
+          # FIREBASE_TOKEN 需要在 GitHub Secrets 中配置
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          # PROJECT_ID 应该设置为你的新 Firebase 项目的 ID
+          # 建议也在 GitHub Secrets 中设置，而不是硬编码
+          PROJECT_ID: ${{ secrets.FIREBASE_NEW_PROJECT_ID }}
