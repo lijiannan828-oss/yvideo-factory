@@ -3,6 +3,7 @@
 import os
 from typing import Optional
 from pathlib import Path
+from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
@@ -16,7 +17,7 @@ class Settings(BaseSettings):
     # -------------------------------------------------------------------------
     APP_NAME: str = "YVideo Factory"
     APP_ENV: str = "dev"
-    APP_TIMEZONE: str = "Asia/Shanghai"
+    APP_TIMEZONE: str = "America/Chicago"
     LOG_LEVEL: str = "INFO"
     
     # API服务的监听主机和端口 (主要用于Uvicorn命令行，但放在这里保持一致性)
@@ -27,7 +28,15 @@ class Settings(BaseSettings):
     # 安全配置 (Security Settings)
     # -------------------------------------------------------------------------
     SERVICE_API_KEY: str
-    CORS_ORIGINS: str = "http://localhost:3000"
+
+    CORS_ORIGINS: list[str] = ["http://localhost:3000"]
+
+    @field_validator("CORS_ORIGINS", mode="before")
+    @classmethod
+    def assemble_cors_origins(cls, v):
+        if isinstance(v, str) and not v.startswith("["):
+            return [i.strip() for i in v.split(",")]
+        return v
 
     # -------------------------------------------------------------------------
     # 数据库 (PostgreSQL)
