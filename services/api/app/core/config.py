@@ -33,7 +33,7 @@ class Settings(BaseSettings):
 
     @property
     def cors_list(self) -> list[str]:
-        return [i.strip() for i in self.CORS_ORIGINS.split(",")]
+        return [i.strip().strip("'") for i in self.CORS_ORIGINS.split(",")]
 
     # -------------------------------------------------------------------------
     # 数据库 (PostgreSQL)

@@ -4,7 +4,7 @@ from pydantic_settings import BaseSettings
 from pydantic import validator
 
 # 模拟环境变量
-os.environ["CORS"] = "https://video-factory-c8a2a.web.app,https://luxivideo.com,https://www.luxivideo.com"
+os.environ["CORS"] = 'https://video-factory-c8a2a.web.app,https://luxivideo.com,https://www.luxivideo.com'
 
 
 class Settings(BaseSettings):

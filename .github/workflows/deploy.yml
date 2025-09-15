@@ -71,12 +71,11 @@ jobs:
             LOG_LEVEL=INFO
             HOST=0.0.0.0
             SERVICE_API_KEY=${{ secrets.SERVICE_API_KEY }}
-            CORS=https://video-factory-c8a2a.web.app,https://luxivideo.com,https://www.luxivideo.com
+            CORS_ORIGINS='https://video-factory-c8a2a.web.app,https://luxivideo.com,https://www.luxivideo.com'
             GCP_REGION=${{ env.GCP_REGION }}
             VERTEX_PROJECT=${{ env.GCP_PROJECT_ID }}
             VERTEX_LOCATION=us-central1
             VERTEX_MODEL=gemini-2.5-pro
-            GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }}
             CLOUD_SQL_CONN_NAME=${{ secrets.CLOUD_SQL_CONN_NAME }}
             DATABASE_URL=postgresql+psycopg2://appprod:${{ secrets.POSTGRES_PASSWORD }}@/yvideo_prod?host=/cloudsql/${{ secrets.CLOUD_SQL_CONN_NAME }}
             REDIS_URL=redis://${{ secrets.REDIS_HOST }}:6379/0
@@ -86,10 +85,11 @@ jobs:
             CELERY_WORKER_CONCURRENCY=8
             CELERY_PREFETCH_MULTIPLIER=1
             CELERY_TASK_ACKS_LATE=true
-            CELERY_QUEUES=high_priority,default,gpu_queue,api_queue,cpu_queue,analysis_queue,low_priority
+            CELERY_QUEUES='high_priority,default,gpu_queue,api_queue,cpu_queue,analysis_queue,low_priority'
             GCS_ENABLE=true
             GCS_BUCKET_NAME=${{ secrets.GCS_BUCKET_NAME }}
             GCS_OUTPUT_PREFIX=prod
+            GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }}
             DEFAULT_STORAGE_URI=gs://video_fatory/yvideo/
             GUNICORN_WORKERS=4
             GUNICORN_THREADS=2
@@ -192,6 +192,7 @@ jobs:
             echo "WORKFLOWS_DIR=./orchestrator/workflows" >> infra/.env.prod
             echo "ROUTER_RULES_PATH=./rules/router.yaml" >> infra/.env.prod
             echo "QC_RULES_DIR=./rules/qc" >> infra/.env.prod
+            echo "GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }}" >> infra/.env.prod
             echo "PROMETHEUS_ENABLE=true" >> infra/.env.prod
             echo "PROMETHEUS_METRICS_PATH=/metrics" >> infra/.env.prod
             echo "BASIC_AUTH_USER=admin" >> infra/.env.prod
