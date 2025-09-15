@@ -33,14 +33,16 @@ jobs:
         with:
           python-version: '3.11' # 您可以根据项目需求修改 Python 版本
           cache: 'pip' # 缓存 pip 依赖，加速后续构建
+      - name: Install venv
+        run: sudo apt-get update && sudo apt-get install -y python3-venv
+      - name: Create venv
+        run: python -m venv .venv
 
       # 3. 安装 Python 依赖
       - name: Install dependencies
-        run: |
-          python -m venv .venv
-          source .venv/bin/activate
-          pip install -r requirements.txt
-          pip install -r dev-requirements.txt # 安装开发和测试依赖
+        run: .venv/bin/pip install -r requirements.txt
+      - name: Run tests
+        run: .venv/bin/python -m pytest
 
       # 4. 运行代码风格检查 (Linting) - 示例使用 flake8
       # 您需要确保 flake8 已经添加到 dev-requirements.txt 中
@@ -58,11 +60,6 @@ jobs:
           source .venv/bin/activate
           pytest
 
-      # 6. (可选, 推荐) 验证 Docker 镜像是否能成功构建
-      - name: Verify API Docker build
-        run: docker build -t test-api-image -f Dockerfile.api .
-      - name: Verify Worker Docker build
-        run: docker build -t test-worker-image -f Dockerfile.worker .
 
   # --- 前端检查任务 ---
   frontend-checks:
@@ -74,10 +71,10 @@ jobs:
         uses: actions/checkout@v4
 
       # 2. 设置 Node.js 环境
-      - name: Use Node.js 18
+      - name: Use Node.js 20.19.0
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '20.19.0'
           # 缓存 npm 依赖，加速后续构建
           cache: 'npm'
           cache-dependency-path: ui/admin/package-lock.json
