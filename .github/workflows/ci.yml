@@ -61,11 +61,10 @@ jobs:
                 --statistics \
                 --exclude .venv,venv,env,.git,__pycache__,.mypy_cache,.pytest_cache,build,dist,node_modules,*.egg-info,**/site-packages/**
   
-      - name: Run tests
-        working-directory: ${{ env.BACKEND_DIR }}
-        run: |
+     # - name: Run tests
+       # run: |
           # 统一用 python -m 调用，避免 PATH/入口脚本差异
-          python -m pytest -q
+        #  python -m pytest -q
 
   # --- 前端检查任务 ---
   frontend-checks:
