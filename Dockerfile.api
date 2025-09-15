@@ -52,7 +52,7 @@ ENV PATH="/opt/venv/bin:$PATH"
 
 # Expose the port the app will run on.
 # Cloud Run will automatically use this, but it's good practice to declare it.
-EXPOSE 8000
+EXPOSE 8080
 
 # Define the command to run the application using uvicorn.
 # This will be the entry point of our container.
