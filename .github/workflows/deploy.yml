@@ -71,7 +71,7 @@ jobs:
             LOG_LEVEL=INFO
             HOST=0.0.0.0
             SERVICE_API_KEY=${{ secrets.SERVICE_API_KEY }}
-            CORS_ORIGINS: '["https://luxivideo.com","https://*.luxivideo.com","https://video-factory-c8a2a.web.app"]'
+            CORS_ORIGINS='["https://luxivideo.com","https://*.luxivideo.com","https://video-factory-c8a2a.web.app"]'
             GCP_REGION=${{ env.GCP_REGION }}
             VERTEX_PROJECT=${{ env.GCP_PROJECT_ID }}
             VERTEX_LOCATION=us-central1
