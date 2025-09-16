@@ -71,7 +71,7 @@ jobs:
             LOG_LEVEL=INFO
             HOST=0.0.0.0
             SERVICE_API_KEY=${{ secrets.SERVICE_API_KEY }}
-            CORS_ORIGINS="https://video-factory-c8a2a.web.app,https://luxivideo.com,https://www.luxivideo.com"
+            CORS_ORIGINS=https://video-factory-c8a2a.web.app;https://luxivideo.com;https://www.luxivideo.com
             GCP_REGION=${{ env.GCP_REGION }}
             VERTEX_PROJECT=${{ env.GCP_PROJECT_ID }}
             VERTEX_LOCATION=us-central1
@@ -85,7 +85,7 @@ jobs:
             CELERY_WORKER_CONCURRENCY=8
             CELERY_PREFETCH_MULTIPLIER=1
             CELERY_TASK_ACKS_LATE=true
-            CELERY_QUEUES="high_priority,default,gpu_queue,api_queue,cpu_queue,analysis_queue,low_priority"
+            CELERY_QUEUES=high_priority|default|gpu_queue|api_queue|cpu_queue|analysis_queue|low_priority
             GCS_ENABLE=true
             GCS_BUCKET_NAME=${{ secrets.GCS_BUCKET_NAME }}
             GCS_OUTPUT_PREFIX=prod
