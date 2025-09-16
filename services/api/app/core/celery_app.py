@@ -89,4 +89,5 @@ celery_app.conf.update(
     result_expires=86400,
     task_track_started=True,
     task_acks_late=True,
+    broker_connection_retry_on_startup=True,
 )
